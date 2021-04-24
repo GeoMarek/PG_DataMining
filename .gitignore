@@ -1,0 +1,4 @@
+# jupyter directories
+/.ipynb_checkpoints
+/virtual_environment
+notes.txt

@@ -1,0 +1,64 @@
+\documentclass[12pt, oneside, openany]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+\renewcommand*{\figurename}{Rys.}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{geometry}
+\geometry{
+	left=25mm,
+	right=25mm,%
+	bindingoffset=10mm, 
+	top=25mm, 
+	bottom=25mm}
+\title{
+	Eksploracyjna analiza danych \\
+	Światowy program szczepień przeciwko COVID-19
+}
+\author{
+	Marek Grudkowski 156587
+	\\
+	Kamil Kaczmarkiewicz 171701
+}
+
+\begin{document}
+
+\maketitle
+
+\section{Ogólny opis danych}
+
+Zbiór danych dotyczy aktualnego postępu poszczególnych krajów w szczepieniach przeciwko COVID-19. W dobie pandemii jest to niezwykle gorący temat. Naszym zdaniem warto się na nim skupić, gdyż może zawierać wiele ukrytych informacji, które mogą przydać się w walce z pandemią i przyspieszyć sam proces szczepień. 
+
+\section{Cel eksploracji i kryteria sukcesu}
+
+\section{Charakterystyka zbioru danych}
+Zbiór danych zawiera ponad 13300 przykładów, które pochodzą z wielu różnych źródeł. Zazwyczaj są nimi organy krajowe lub lokalne, czy międzynarodowe organizacje. Dla każdego przykładu podane jest źródło i jego adres internetowy, co daje możliwość weryfikacji w przypadku jakichkolwiek wątpliwości co do poprawności danych. Dane zapisane są w jednym pliku w formacie csv i podzielone są na następujące kolumny:
+\begin{itemize}
+\item \textbf{country} - kraj, dla którego podawane są informacje o szczepieniu, atrybut nominalny w postaci ciągu znaków
+\item \textbf{iso\_code} - kod ISO dla danego kraju, atrybut nominalny w postaci ciągu znaków
+\item \textbf{date} - data wprowadzenia danych, atrybut nominalny opisujący datę
+\item \textbf{total\_vaccinations} - bezwzględna liczba wszystkich szczepień ochronnych w danym kraju, atrybut numeryczny (liczba naturalna)
+\item \textbf{people\_vaccinated} - liczba osób która otrzymała szczepionkę (przy dwóch dawkach liczona jest $\times2$), atrybut numeryczny (liczba naturalna)
+\item \textbf{people\_fully\_vaccinated} -  liczba osób, które otrzymały cały zestaw szczepień, atrybut numeryczny (liczba naturalna)
+\item \textbf{daily\_vaccinations\_raw} - dla danej pozycji liczba szczepień dla tej daty/kraju, atrybut numeryczny (liczba naturalna)
+\item \textbf{daily\_vaccinations} - dla danej pozycji liczba szczepień dla tej daty/kraju, atrybut numeryczny (liczba naturalna)
+\item \textbf{total\_vaccinations\_per\_hundred} - stosunek liczby szczepień do całkowitej liczby ludności danego dnia w kraju, atrybut numeryczny wyrażany w procentach
+\item \textbf{people\_vaccinated\_per\_hundred} - stosunek liczby osób zaszczepionych do całkowitej liczby ludności danego dnia w kraju, atrybut numeryczny wyrażany w procentach
+\item \textbf{people\_fully\_vaccinated\_per\_hundred} - stosunek liczby osób uodpornionych do całkowitej liczby ludności danego dnia w kraju, atrybut numeryczny wyrażany w procentach
+\item \textbf{daily\_vaccinations\_per\_million} - stosunek między liczbą szczepień a całkowitą liczbą ludności na bieżący dzień w kraju, dodania liczba rzeczywista
+\item \textbf{vaccines} - rodzaje szczepionek wykorzystanych w danym kraju, atrybut nominalny, ciągi znaków rozdzielone ukośnikiem
+\item \textbf{source\_name} - źródło informacji, atrybut nominalny, ciąg znaków
+\item \textbf{source\_website} - strona internetowa źródła informacji, atrybut nominalny, ciąg znaków
+\end{itemize}
+
+
+\section{Wyniki eksploracyjnej analizy danych}
+rozkłady wartości atrybutów, korelacje pomiędzy wartościami atrybutów
+wstępne ustalenia dotyczące zawartości zbioru 
+\section{Uwagi dotyczące jakości danych}
+dane brakujące, punkty oddalone, dane niespójne, dane niezrozumiałe,
+\section{Opis wyników eksploracji}
+
+w odniesieniu do celów eksploracji, czy dane są wystarczające, ewentualna rewizja celów
+
+\end{document}
