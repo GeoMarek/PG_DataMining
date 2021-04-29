@@ -101,13 +101,13 @@ Widać więc, że wszystkie owe atrybuty są od siebie wręcz idealnie liniowo z
 
 
 \begin{figure}
-  \begin{subfigure}[t]{.4\textwidth}
+  \begin{subfigure}[t]{.45\textwidth}
     \centering
     \includegraphics[width=\linewidth]{../img/null_column_diff1.png}
     \caption{Korelacja między dzienną liczbą wykonanych szczepień ogółem i na milion osób}
   \end{subfigure}
   \hfill
-  \begin{subfigure}[t]{.4\textwidth}
+  \begin{subfigure}[t]{.45\textwidth}
     \centering
     \includegraphics[width=\linewidth]{../img/null_column_diff2.png}
     \caption{Korelacja między liczbą ludzi w pełni zaszczepionymi ogółem i na 100 osób}
@@ -115,13 +115,13 @@ Widać więc, że wszystkie owe atrybuty są od siebie wręcz idealnie liniowo z
 
   \medskip
 
-  \begin{subfigure}[t]{.4\textwidth}
+  \begin{subfigure}[t]{.45\textwidth}
     \centering
     \includegraphics[width=\linewidth]{../img/null_column_diff3.png}
     \caption{Korelacja między liczbą ludzi którzy przyjęli choć jedną dawkę ogółem i na 100 osób}
   \end{subfigure}
   \hfill
-  \begin{subfigure}[t]{.4\textwidth}
+  \begin{subfigure}[t]{.45\textwidth}
     \centering
     \includegraphics[width=\linewidth]{../img/null_column_diff4.png}
     \caption{Korelacja między liczbą wykonanych szczepień ogółem i na sto osób}
@@ -131,41 +131,38 @@ Widać więc, że wszystkie owe atrybuty są od siebie wręcz idealnie liniowo z
 \end{figure}
 
 
-Jedynym \textit{samotnym} atrybutem w jakim pozostały wartości \textit{null} jest \textit{daily\_vaccinations\_raw}. Jego nazwa wskazuje, że mógłby mieć powiązanie z atrybutem \textit{daily\_vaccinations}, ale żeby to stwierdzić, trzeba tak jak w poprzedniej sytuacji obliczyć korelację między tymi atrybutami, której rozkład wśród państw ostatecznie odrzucił tą propozycję. Wynik można zobaczyć na wykresie poniżej:
+Po wykonaniu tej operacji jedynym \textit{samotnym} atrybutem w jakim pozostały wartości \textit{null} jest \textit{daily\_vaccinations\_raw}. Jego nazwa wskazuje, że mógłby mieć powiązanie z atrybutem \textit{daily\_vaccinations}, ale żeby to stwierdzić, trzeba tak jak w poprzedniej sytuacji obliczyć korelację między tymi atrybutami. Rozkład wyznaczonych korelacji wśród państw ostatecznie odrzucił tą propozycję. Wynikowy histogram można zobaczyć na wykresie poniżej:
 
 
-\begin{figure}
+\begin{figure}[h]
 \centering
-\includegraphics[scale=0.5]
-
-{../img/raw\_corr.png} \label{Rys:kor}
-\caption{Korelacje pomiędzy poszczególnym atrybutami zbioru}
+\includegraphics[scale=0.5]{../img/raw_corr.png} 
+\label{Rys:kor}
+\caption{Korelacja pomiędzy \textit{daily\_vaccinations\_raw} oraz \textit{daily\_vaccinations}}
 \label{Rys:kor}
 \end{figure}
-
-Kolejnym krokiem było utworzenie diagramu, który wizualizuje współczynnik korelacji pomiędzy poszczególnymi atrybutami. Widać na nim, że są one podzielone na dwie podgrupy, w których występują silne zależności między atrybutami. Pierwszą z nich zaklasyfikowaliśmy jako dane bezwzględne i zawiera atrybuty, które opisują bezwzględne wartości liczbowe np. liczba zaszczepionych osób. Druga grupa dotyczy atrybutów, których wartości podawane są w procentach np. liczba osób w pełni zaszczepionych na sto. 
-
-\begin{center}
-\includegraphics[scale=0.7]
-{../img/corelation.png} 
-\end{center}
-
-Mimo ładnego podziału zbioru atrybutów na dwie grupy, pojawiło się pytanie - dlaczego zauważamy bardzo niską korelacją pomiędzy atrybutami, które powinny być ze sobą powiązane w dużym stopniu. Chodzi tutaj na przykład o sumę ludzi w pełni zaszczepionych oraz procent ludzi w pełni zaszczepionych na sto. Być może ma to związek z tym, że powyższy diagram przedstawia dane dotyczące całego świata, a pojedyncze przykłady dotyczą konkretnych państw. By to sprawdzić zrealizowaliśmy podobny wykres, ale opisujący  tylko zbiór przykładów z takich państw jak Niemcy, USA i Polska.
-
-\begin{center}
-\includegraphics[scale=0.7]
-{../img/corelation.png} 
-\end{center}
+\textbf{Co zostało do zrobienia:}
+\begin{itemize}
+\item opisać cele eksploracji i kryteria sukcesu
+\item dodać heat map korelacji dla wszystkich państw
+\item dodać heat map korelacji dla kilku przykładowych państw
+\item opisać pochodzenie kolumny raw
+\item dlaczego odrzucamy rozkład wartości bezwzględnych
+\item wykresy pudełkowe dla wartości względnych
+\item opisać wykresy pudełkowe (każdy osobno)
+\item zaprezentować zmianę w czasie dla jednej kolumny
+\item podsumowanie i wnioski
+\end{itemize}
 
 
-Rozkłady wartości dla atrybutów 
 
-rozkłady wartości atrybutów, korelacje pomiędzy wartościami atrybutów
-wstępne ustalenia dotyczące zawartości zbioru 
-\section{Uwagi dotyczące jakości danych}
-dane brakujące, punkty oddalone, dane niespójne, dane niezrozumiałe,
-\section{Opis wyników eksploracji}
 
-w odniesieniu do celów eksploracji, czy dane są wystarczające, ewentualna rewizja celów
+%Rozkłady wartości dla atrybutów 
+%rozkłady wartości atrybutów, korelacje pomiędzy wartościami atrybutów
+%wstępne ustalenia dotyczące zawartości zbioru 
+%\section{Uwagi dotyczące jakości danych}
+%dane brakujące, punkty oddalone, dane niespójne, dane niezrozumiałe,
+%\section{Opis wyników eksploracji}
+%w odniesieniu do celów eksploracji, czy dane są wystarczające, ewentualna rewizja celów
 
 \end{document}

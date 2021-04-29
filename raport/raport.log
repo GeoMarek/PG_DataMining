@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.24)  29 APR 2021 22:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.24)  29 APR 2021 23:33
 entering extended mode
 **./raport.tex
 (raport.tex
@@ -185,7 +185,14 @@ File: l3backend-pdftex.def 2021-02-18 L3 backend support: PDF output (pdfTeX)
 LaTeX Warning: Unused global option(s):
     [openany].
 
-(raport.aux)
+(raport.aux
+
+LaTeX Warning: Label `Rys:kor' multiply defined.
+
+
+LaTeX Warning: Label `Rys:kor' multiply defined.
+
+)
 \openout1 = `raport.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
@@ -313,74 +320,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 91--100
 File: ../img/null_column_diff1.png Graphic file (type png)
 <use ../img/null_column_diff1.png>
 Package pdftex.def Info: ../img/null_column_diff1.png  used on input line 106.
-(pdftex.def)             Requested size: 177.42868pt x 124.69069pt.
+(pdftex.def)             Requested size: 199.60896pt x 140.27916pt.
 <../img/null_column_diff2.png, id=15, 398.48875pt x 279.0425pt>
 File: ../img/null_column_diff2.png Graphic file (type png)
 <use ../img/null_column_diff2.png>
 Package pdftex.def Info: ../img/null_column_diff2.png  used on input line 112.
-(pdftex.def)             Requested size: 177.42868pt x 124.24376pt.
+(pdftex.def)             Requested size: 199.60896pt x 139.77637pt.
 <../img/null_column_diff3.png, id=16, 398.48875pt x 279.0425pt>
 File: ../img/null_column_diff3.png Graphic file (type png)
 <use ../img/null_column_diff3.png>
 Package pdftex.def Info: ../img/null_column_diff3.png  used on input line 120.
-(pdftex.def)             Requested size: 177.42868pt x 124.24376pt.
+(pdftex.def)             Requested size: 199.60896pt x 139.77637pt.
 <../img/null_column_diff4.png, id=17, 398.48875pt x 279.0425pt>
 File: ../img/null_column_diff4.png Graphic file (type png)
 <use ../img/null_column_diff4.png>
 Package pdftex.def Info: ../img/null_column_diff4.png  used on input line 126.
-(pdftex.def)             Requested size: 177.42868pt x 124.24376pt.
-
-Overfull \hbox (34.92757pt too wide) in paragraph at lines 134--135
-[]\OT4/cmr/m/n/12 Jedynym \OT4/cmr/m/it/12 sa-mot-nym \OT4/cmr/m/n/12 atry-bu-t
-em w ja-kim po-zo-sta-ªy war-to-±ci \OT4/cmr/m/it/12 null \OT4/cmr/m/n/12 jest 
-\OT4/cmr/m/it/12 da-ily[]vaccinations[]raw\OT4/cmr/m/n/12 .
- []
-
+(pdftex.def)             Requested size: 199.60896pt x 139.77637pt.
 [3] [4 <../img/null_column_diff1.png> <../img/null_column_diff2.png> <../img/nu
 ll_column_diff3.png> <../img/null_column_diff4.png>]
-Runaway argument?
-! Paragraph ended before \Gin@ii was complete.
-<to be read again> 
-                   \par 
-l.140 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
+<../img/raw_corr.png, id=30, 387.4475pt x 279.0425pt>
+File: ../img/raw_corr.png Graphic file (type png)
+<use ../img/raw_corr.png>
+Package pdftex.def Info: ../img/raw_corr.png  used on input line 139.
+(pdftex.def)             Requested size: 193.72327pt x 139.5209pt.
+ [5 <../img/raw_corr.png>]
+(raport.aux)
 
-<../img/corelation.png, id=30, 635.37375pt x 611.28375pt>
-File: ../img/corelation.png Graphic file (type png)
-<use ../img/corelation.png>
-Package pdftex.def Info: ../img/corelation.png  used on input line 150.
-(pdftex.def)             Requested size: 444.75859pt x 427.8957pt.
-
-Overfull \hbox (1.1801pt too wide) in paragraph at lines 149--151
- [] 
- []
-
-[5 <../img/corelation.png>]
-File: ../img/corelation.png Graphic file (type png)
-<use ../img/corelation.png>
-Package pdftex.def Info: ../img/corelation.png  used on input line 157.
-(pdftex.def)             Requested size: 444.75859pt x 427.8957pt.
-
-Overfull \hbox (1.1801pt too wide) in paragraph at lines 156--158
- [] 
- []
-
-[6] [7] (raport.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
  3380 strings out of 479334
- 57769 string characters out of 2851821
+ 57757 string characters out of 2851821
  358207 words of memory out of 3000000
  20810 multiletter control sequences out of 15000+200000
  414261 words of font info for 54 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,8n,77p,634b,460s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 69i,8n,77p,585b,460s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/p
 lrm.enc}{C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/enc/dvip
 s/pl/plit.enc}{C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/en
@@ -393,9 +369,9 @@ arek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plr17.pfb><
 C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/p
 lsy10.pfb><C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/type1/
 public/pl/plti12.pfb>
-Output written on raport.pdf (7 pages, 145964 bytes).
+Output written on raport.pdf (5 pages, 103807 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
+ 61 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
