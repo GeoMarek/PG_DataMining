@@ -5,6 +5,7 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{geometry}
+\usepackage{subcaption}
 \geometry{
 	left=25mm,
 	right=25mm,%
@@ -58,10 +59,11 @@ Zbiór danych na stan dnia pisania tego sprawozdania zawiera ponad 13300 przykł
 
 
 
-Podczas analizowania danych pierwszym etapem, było sprawdzenie w jakiej ilości występują wartości zerowe lub \textit{NaN}. Ku naszemu zaskoczeniu przykładów z takimi wartościami było naprawdę dużo. Wyniki tej operacji poniżej. 
+Podczas analizowania danych pierwszym etapem, było sprawdzenie w jakiej ilości występują wartości puste. Ku naszemu zaskoczeniu przykładów z takimi wartościami było naprawdę dużo. Wyniki tej operacji zliczającej takie przykłady poniżej 
 
-\begin{center}
 \begin{table}[h]
+
+\centering
 \begin{tabular}{|l|c|}
 \hline
 \multicolumn{1}{|c|}{\textbf{Atrybut}} & \textbf{Brakujące wartości} \\ \hline
@@ -81,11 +83,65 @@ vaccines                               & 0                           \\ \hline
 source name                            & 0                           \\ \hline
 source website                         & 0                           \\ \hline
 \end{tabular}
+\caption{Puste wartości w zbiorze danych}
+\label{Tab:Tcr}
 \end{table}
-\end{center}
 
-W tabeli można zauważyć, że liczba brakujących wartości dla atrybutów takich jak \textit{people\_fully\_vaccinated\_per\_hundred} i \textit{people\_vaccinated\_per\_hundred} są takie same jak dla \textit{people\_fully\_vaccinated} i \textit{people\_vaccinated}. Na 9 atrybutów, w których występują brakujące dane, 8 z nich tworzy właśnie takie pary. Jedynym \textit{samotnym} atrybutem jest \textit{daily\_vaccinations\_raw}. Jego nazwa wskazuje, że mógłby mieć powiązanie z atrybutem \textit{daily\_vaccinations}, ale żeby to stwierdzić, trzeba wyliczyć korelację między tymi atrybutami porzucając te przykłady, w których występują braki. 
 
+W tabeli można zauważyć, że liczba brakujących wartości dla atrybutów takich jak \textit{people\_fully\_vaccinated\_per\_hundred} są takie same jak dla \textit{people\_fully\_vaccinated}. Widać, że jest to para \textit{liczba bezwzględna - liczba względna}. Na 9 atrybutów, w których występują brakujące dane, 8 z nich tworzy właśnie takie pary. Bardzo możliwe, że te atrybuty mogą być od siebie liniowo zależne i są to po prostu przykłady opisujące momenty, kiedy program szczepień nie funkcjonował jeszcze w danym kraju. 
+\\
+\
+\\
+Cały zbiór przykładów jest podzielony na państwa, więc obliczenie korelacji między kolejnymi atrybutami dla wszystkich państw mogło by nie dać poprawnych wyników, gdyż dane z każdego kraju pochodzą z innego źródła. W celu uniknięcia tego błędu policzyliśmy współczynnik korelacji między poszczególnymi atrybutami dla każdego państwa osobno i z otrzymanych wartości sporządziliśmy histogram. Wyniki są zaprezentowane na wykresie poniżej. 
+\\
+\
+\\
+Widać więc, że wszystkie owe atrybuty są od siebie wręcz idealnie liniowo zależne, co potwierdza nasze przypuszczenia. Dzięki tej krótkiej analizie byliśmy w stanie podjąć decyzję o uzupełnieniu \textit{sparowanych} atrybutów zerami.
+
+
+
+\begin{figure}
+  \begin{subfigure}[t]{.4\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{../img/null_column_diff1.png}
+    \caption{Korelacja między dzienną liczbą wykonanych szczepień ogółem i na milion osób}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{.4\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{../img/null_column_diff2.png}
+    \caption{Korelacja między liczbą ludzi w pełni zaszczepionymi ogółem i na 100 osób}
+  \end{subfigure}
+
+  \medskip
+
+  \begin{subfigure}[t]{.4\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{../img/null_column_diff3.png}
+    \caption{Korelacja między liczbą ludzi którzy przyjęli choć jedną dawkę ogółem i na 100 osób}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{.4\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{../img/null_column_diff4.png}
+    \caption{Korelacja między liczbą wykonanych szczepień ogółem i na sto osób}
+  \end{subfigure}
+  \caption{Korelacje pomiędzy poszczególnym atrybutami zbioru}
+\label{Rys:kor}
+\end{figure}
+
+
+Jedynym \textit{samotnym} atrybutem w jakim pozostały wartości \textit{null} jest \textit{daily\_vaccinations\_raw}. Jego nazwa wskazuje, że mógłby mieć powiązanie z atrybutem \textit{daily\_vaccinations}, ale żeby to stwierdzić, trzeba tak jak w poprzedniej sytuacji obliczyć korelację między tymi atrybutami, której rozkład wśród państw ostatecznie odrzucił tą propozycję. Wynik można zobaczyć na wykresie poniżej:
+
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.5]
+
+{../img/raw\_corr.png} \label{Rys:kor}
+\caption{Korelacje pomiędzy poszczególnym atrybutami zbioru}
+\label{Rys:kor}
+\end{figure}
 
 Kolejnym krokiem było utworzenie diagramu, który wizualizuje współczynnik korelacji pomiędzy poszczególnymi atrybutami. Widać na nim, że są one podzielone na dwie podgrupy, w których występują silne zależności między atrybutami. Pierwszą z nich zaklasyfikowaliśmy jako dane bezwzględne i zawiera atrybuty, które opisują bezwzględne wartości liczbowe np. liczba zaszczepionych osób. Druga grupa dotyczy atrybutów, których wartości podawane są w procentach np. liczba osób w pełni zaszczepionych na sto. 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.24)  27 APR 2021 22:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.24)  29 APR 2021 22:58
 entering extended mode
 **./raport.tex
 (raport.tex
@@ -148,10 +148,37 @@ Package: iftex 2020/03/06 v1.0d TeX engine tests
 
 (C:\Users\Marek Grudkowski\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geo
 metry.cfg))
+(C:\Users\Marek Grudkowski\AppData\Local\Programs\MiKTeX\tex/latex/caption\subc
+aption.sty
+Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
+
+(C:\Users\Marek Grudkowski\AppData\Local\Programs\MiKTeX\tex/latex/caption\capt
+ion.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+
+(C:\Users\Marek Grudkowski\AppData\Local\Programs\MiKTeX\tex/latex/caption\capt
+ion3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen149
+\captionmargin@=\dimen150
+\captionwidth=\dimen151
+\caption@tempdima=\dimen152
+\caption@indent=\dimen153
+\caption@parindent=\dimen154
+\caption@hangindent=\dimen155
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count191
+\c@continuedfloat=\count192
+Package caption Info: float package is loaded.
+)
+\c@subfigure=\count193
+\c@subtable=\count194
+)
 (C:\Users\Marek Grudkowski\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3
 backend-pdftex.def
 File: l3backend-pdftex.def 2021-02-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count191
+\l__color_backend_stack_int=\count195
 \l__pdf_internal_box=\box49
 )
 
@@ -161,36 +188,36 @@ LaTeX Warning: Unused global option(s):
 (raport.aux)
 \openout1 = `raport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
 
 (C:\Users\Marek Grudkowski\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\
 supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count192
-\scratchdimen=\dimen149
+\scratchcounter=\count196
+\scratchdimen=\dimen156
 \scratchbox=\box50
-\nofMPsegments=\count193
-\nofMParguments=\count194
+\nofMPsegments=\count197
+\nofMParguments=\count198
 \everyMPshowfont=\toks21
-\MPscratchCnt=\count195
-\MPscratchDim=\dimen150
-\MPnumerator=\count196
-\makeMPintoPDFobject=\count197
+\MPscratchCnt=\count199
+\MPscratchDim=\dimen157
+\MPnumerator=\count266
+\makeMPintoPDFobject=\count267
 \everyMPtoPDFconversion=\toks22
 )
 (C:\Users\Marek Grudkowski\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg
@@ -234,86 +261,141 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Trying to load font information for OML+plm on input line 2
-6.
+7.
 
 (C:\Users\Marek Grudkowski\AppData\Local\Programs\MiKTeX\tex/latex/polski\omlpl
 m.fd
 File: omlplm.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    Trying to load font information for OMS+plsy on input line 
-26.
+27.
 
 (C:\Users\Marek Grudkowski\AppData\Local\Programs\MiKTeX\tex/latex/polski\omspl
 sy.fd
 File: omsplsy.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    Trying to load font information for OMX+plex on input line 
-26.
+27.
 
 (C:\Users\Marek Grudkowski\AppData\Local\Programs\MiKTeX\tex/latex/polski\omxpl
 ex.fd
 File: omxplex.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <14.4> on input line 26.
+(Font)              <14.4> on input line 27.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <10> on input line 26.
+(Font)              <10> on input line 27.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <7> on input line 26.
+(Font)              <7> on input line 27.
  [1
 
 {C:/Users/Marek Grudkowski/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <12> on input line 43.
+(Font)              <12> on input line 44.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <8> on input line 43.
+(Font)              <8> on input line 44.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <6> on input line 43.
+(Font)              <6> on input line 44.
  [2]
-<../img/corelation.png, id=13, 635.37375pt x 611.28375pt>
+Underfull \hbox (badness 10000) in paragraph at lines 91--100
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--100
+
+ []
+
+<../img/null_column_diff1.png, id=13, 398.48875pt x 280.04625pt>
+File: ../img/null_column_diff1.png Graphic file (type png)
+<use ../img/null_column_diff1.png>
+Package pdftex.def Info: ../img/null_column_diff1.png  used on input line 106.
+(pdftex.def)             Requested size: 177.42868pt x 124.69069pt.
+<../img/null_column_diff2.png, id=15, 398.48875pt x 279.0425pt>
+File: ../img/null_column_diff2.png Graphic file (type png)
+<use ../img/null_column_diff2.png>
+Package pdftex.def Info: ../img/null_column_diff2.png  used on input line 112.
+(pdftex.def)             Requested size: 177.42868pt x 124.24376pt.
+<../img/null_column_diff3.png, id=16, 398.48875pt x 279.0425pt>
+File: ../img/null_column_diff3.png Graphic file (type png)
+<use ../img/null_column_diff3.png>
+Package pdftex.def Info: ../img/null_column_diff3.png  used on input line 120.
+(pdftex.def)             Requested size: 177.42868pt x 124.24376pt.
+<../img/null_column_diff4.png, id=17, 398.48875pt x 279.0425pt>
+File: ../img/null_column_diff4.png Graphic file (type png)
+<use ../img/null_column_diff4.png>
+Package pdftex.def Info: ../img/null_column_diff4.png  used on input line 126.
+(pdftex.def)             Requested size: 177.42868pt x 124.24376pt.
+
+Overfull \hbox (34.92757pt too wide) in paragraph at lines 134--135
+[]\OT4/cmr/m/n/12 Jedynym \OT4/cmr/m/it/12 sa-mot-nym \OT4/cmr/m/n/12 atry-bu-t
+em w ja-kim po-zo-sta-ªy war-to-±ci \OT4/cmr/m/it/12 null \OT4/cmr/m/n/12 jest 
+\OT4/cmr/m/it/12 da-ily[]vaccinations[]raw\OT4/cmr/m/n/12 .
+ []
+
+[3] [4 <../img/null_column_diff1.png> <../img/null_column_diff2.png> <../img/nu
+ll_column_diff3.png> <../img/null_column_diff4.png>]
+Runaway argument?
+! Paragraph ended before \Gin@ii was complete.
+<to be read again> 
+                   \par 
+l.140 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+<../img/corelation.png, id=30, 635.37375pt x 611.28375pt>
 File: ../img/corelation.png Graphic file (type png)
 <use ../img/corelation.png>
-Package pdftex.def Info: ../img/corelation.png  used on input line 94.
+Package pdftex.def Info: ../img/corelation.png  used on input line 150.
 (pdftex.def)             Requested size: 444.75859pt x 427.8957pt.
 
-Overfull \hbox (1.1801pt too wide) in paragraph at lines 93--95
+Overfull \hbox (1.1801pt too wide) in paragraph at lines 149--151
  [] 
  []
 
-[3]
+[5 <../img/corelation.png>]
 File: ../img/corelation.png Graphic file (type png)
 <use ../img/corelation.png>
-Package pdftex.def Info: ../img/corelation.png  used on input line 101.
+Package pdftex.def Info: ../img/corelation.png  used on input line 157.
 (pdftex.def)             Requested size: 444.75859pt x 427.8957pt.
 
-Overfull \hbox (1.1801pt too wide) in paragraph at lines 100--102
+Overfull \hbox (1.1801pt too wide) in paragraph at lines 156--158
  [] 
  []
 
-[4 <../img/corelation.png>] [5] (raport.aux) ) 
+[6] [7] (raport.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 2046 strings out of 479334
- 31689 string characters out of 2851821
- 331623 words of memory out of 3000000
- 19490 multiletter control sequences out of 15000+200000
- 413765 words of font info for 53 fonts, out of 3000000 for 9000
+ 3380 strings out of 479334
+ 57769 string characters out of 2851821
+ 358207 words of memory out of 3000000
+ 20810 multiletter control sequences out of 15000+200000
+ 414261 words of font info for 54 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,8n,74p,703b,305s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/Marek Grudkowski/AppDat
-a/Local/Programs/MiKTeX/fonts/enc/dvips/pl/plit.enc}{C:/Users/Marek Grudkowski/
-AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/plms.enc} <C:\Users\Marek Grud
-kowski\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk>{C:/
-Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/plrm.en
-c}<C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/type1/public/p
-l/plbx12.pfb><C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/pl/plr12.pfb><C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/pl/plr17.pfb><C:/Users/Marek Grudkowski/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/pl/plsy10.pfb><C:/Users/Marek Grudkowski/AppData/
-Local/Programs/MiKTeX/fonts/type1/public/pl/plti12.pfb>
-Output written on raport.pdf (5 pages, 103678 bytes).
+ 69i,8n,77p,634b,460s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/p
+lrm.enc}{C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/enc/dvip
+s/pl/plit.enc}{C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/en
+c/dvips/pl/plms.enc} <C:\Users\Marek Grudkowski\AppData\Local\MiKTeX\fonts/pk/l
+jfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Marek Grudkowski/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/pl/plbx12.pfb><C:/Users/Marek Grudkowski/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/pl/plr10.pfb><C:/Users/Marek Grudk
+owski/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plr12.pfb><C:/Users/M
+arek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plr17.pfb><
+C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/p
+lsy10.pfb><C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/pl/plti12.pfb>
+Output written on raport.pdf (7 pages, 145964 bytes).
 PDF statistics:
- 49 PDF objects out of 1000 (max. 8388607)
+ 69 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
