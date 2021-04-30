@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.24)  29 APR 2021 23:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.24)  1 MAY 2021 00:25
 entering extended mode
 **./raport.tex
 (raport.tex
@@ -175,6 +175,10 @@ Package caption Info: float package is loaded.
 \c@subfigure=\count193
 \c@subtable=\count194
 )
+(C:\Users\Marek Grudkowski\AppData\Local\Programs\MiKTeX\tex/latex/latex-tools\
+indentfirst.sty
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+)
 (C:\Users\Marek Grudkowski\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3
 backend-pdftex.def
 File: l3backend-pdftex.def 2021-02-18 L3 backend support: PDF output (pdfTeX)
@@ -185,32 +189,25 @@ File: l3backend-pdftex.def 2021-02-18 L3 backend support: PDF output (pdfTeX)
 LaTeX Warning: Unused global option(s):
     [openany].
 
-(raport.aux
-
-LaTeX Warning: Label `Rys:kor' multiply defined.
-
-
-LaTeX Warning: Label `Rys:kor' multiply defined.
-
-)
+(raport.aux)
 \openout1 = `raport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
 
 (C:\Users\Marek Grudkowski\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\
 supp-pdf.mkii
@@ -271,107 +268,113 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Trying to load font information for OML+plm on input line 2
-7.
+8.
 
 (C:\Users\Marek Grudkowski\AppData\Local\Programs\MiKTeX\tex/latex/polski\omlpl
 m.fd
 File: omlplm.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    Trying to load font information for OMS+plsy on input line 
-27.
+28.
 
 (C:\Users\Marek Grudkowski\AppData\Local\Programs\MiKTeX\tex/latex/polski\omspl
 sy.fd
 File: omsplsy.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    Trying to load font information for OMX+plex on input line 
-27.
+28.
 
 (C:\Users\Marek Grudkowski\AppData\Local\Programs\MiKTeX\tex/latex/polski\omxpl
 ex.fd
 File: omxplex.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <14.4> on input line 27.
+(Font)              <14.4> on input line 28.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <10> on input line 27.
+(Font)              <10> on input line 28.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <7> on input line 27.
+(Font)              <7> on input line 28.
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <12> on input line 38.
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <8> on input line 38.
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <6> on input line 38.
  [1
 
-{C:/Users/Marek Grudkowski/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
-LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <12> on input line 44.
-LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <8> on input line 44.
-LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <6> on input line 44.
- [2]
-Underfull \hbox (badness 10000) in paragraph at lines 91--100
+{C:/Users/Marek Grudkowski/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2]
+LaTeX Font Info:    Trying to load font information for OT4+cmtt on input line 
+111.
 
- []
+(C:\Users\Marek Grudkowski\AppData\Local\Programs\MiKTeX\tex/latex/polski\ot4cm
+tt.fd
+File: ot4cmtt.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
+) [3]
+<../img/corelation.png, id=17, 635.37375pt x 667.49374pt>
+File: ../img/corelation.png Graphic file (type png)
+<use ../img/corelation.png>
+Package pdftex.def Info: ../img/corelation.png  used on input line 148.
+(pdftex.def)             Requested size: 354.86414pt x 372.81618pt.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--100
+LaTeX Warning: `h' float specifier changed to `ht'.
 
- []
+<../img/usa_corr.png, id=19, 642.4pt x 611.28375pt>
+File: ../img/usa_corr.png Graphic file (type png)
+<use ../img/usa_corr.png>
+Package pdftex.def Info: ../img/usa_corr.png  used on input line 157.
+(pdftex.def)             Requested size: 354.86414pt x 337.68083pt.
 
-<../img/null_column_diff1.png, id=13, 398.48875pt x 280.04625pt>
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../img/null_column_diff1.png, id=20, 398.48875pt x 280.04625pt>
 File: ../img/null_column_diff1.png Graphic file (type png)
 <use ../img/null_column_diff1.png>
-Package pdftex.def Info: ../img/null_column_diff1.png  used on input line 106.
+Package pdftex.def Info: ../img/null_column_diff1.png  used on input line 167.
 (pdftex.def)             Requested size: 199.60896pt x 140.27916pt.
-<../img/null_column_diff2.png, id=15, 398.48875pt x 279.0425pt>
+<../img/null_column_diff2.png, id=21, 398.48875pt x 279.0425pt>
 File: ../img/null_column_diff2.png Graphic file (type png)
 <use ../img/null_column_diff2.png>
-Package pdftex.def Info: ../img/null_column_diff2.png  used on input line 112.
+Package pdftex.def Info: ../img/null_column_diff2.png  used on input line 173.
 (pdftex.def)             Requested size: 199.60896pt x 139.77637pt.
-<../img/null_column_diff3.png, id=16, 398.48875pt x 279.0425pt>
+<../img/null_column_diff3.png, id=22, 398.48875pt x 279.0425pt>
 File: ../img/null_column_diff3.png Graphic file (type png)
 <use ../img/null_column_diff3.png>
-Package pdftex.def Info: ../img/null_column_diff3.png  used on input line 120.
+Package pdftex.def Info: ../img/null_column_diff3.png  used on input line 181.
 (pdftex.def)             Requested size: 199.60896pt x 139.77637pt.
-<../img/null_column_diff4.png, id=17, 398.48875pt x 279.0425pt>
+<../img/null_column_diff4.png, id=23, 398.48875pt x 279.0425pt>
 File: ../img/null_column_diff4.png Graphic file (type png)
 <use ../img/null_column_diff4.png>
-Package pdftex.def Info: ../img/null_column_diff4.png  used on input line 126.
+Package pdftex.def Info: ../img/null_column_diff4.png  used on input line 187.
 (pdftex.def)             Requested size: 199.60896pt x 139.77637pt.
-[3] [4 <../img/null_column_diff1.png> <../img/null_column_diff2.png> <../img/nu
-ll_column_diff3.png> <../img/null_column_diff4.png>]
-<../img/raw_corr.png, id=30, 387.4475pt x 279.0425pt>
-File: ../img/raw_corr.png Graphic file (type png)
-<use ../img/raw_corr.png>
-Package pdftex.def Info: ../img/raw_corr.png  used on input line 139.
-(pdftex.def)             Requested size: 193.72327pt x 139.5209pt.
- [5 <../img/raw_corr.png>]
-(raport.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+[4] [5 <../img/corelation.png>] [6 <../img/usa_corr.png>] [7 <../img/null_colum
+n_diff1.png> <../img/null_column_diff2.png> <../img/null_column_diff3.png> <../
+img/null_column_diff4.png>] (raport.aux) ) 
 Here is how much of TeX's memory you used:
- 3380 strings out of 479334
- 57757 string characters out of 2851821
- 358207 words of memory out of 3000000
- 20810 multiletter control sequences out of 15000+200000
- 414261 words of font info for 54 fonts, out of 3000000 for 9000
+ 3418 strings out of 479334
+ 58730 string characters out of 2851821
+ 359207 words of memory out of 3000000
+ 20839 multiletter control sequences out of 15000+200000
+ 415062 words of font info for 56 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,8n,77p,585b,460s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/p
-lrm.enc}{C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/enc/dvip
-s/pl/plit.enc}{C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/en
-c/dvips/pl/plms.enc} <C:\Users\Marek Grudkowski\AppData\Local\MiKTeX\fonts/pk/l
-jfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Marek Grudkowski/AppData/Local/P
-rograms/MiKTeX/fonts/type1/public/pl/plbx12.pfb><C:/Users/Marek Grudkowski/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/pl/plr10.pfb><C:/Users/Marek Grudk
-owski/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plr12.pfb><C:/Users/M
-arek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plr17.pfb><
-C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/p
-lsy10.pfb><C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/pl/plti12.pfb>
-Output written on raport.pdf (5 pages, 103807 bytes).
+ 69i,7n,77p,879b,460s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/Marek Grudkowski/AppData/Lo
+cal/Programs/MiKTeX/fonts/enc/dvips/pl/plrm.enc} <C:\Users\Marek Grudkowski\App
+Data\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk>{C:/Users/Mare
+k Grudkowski/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/pltt.enc}{C:/User
+s/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/plms.enc}{C
+:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/plit.
+enc}<C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/pl/plbx12.pfb><C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/pl/plr10.pfb><C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/pl/plr12.pfb><C:/Users/Marek Grudkowski/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/pl/plr17.pfb><C:/Users/Marek Grudkowski/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/pl/plsy10.pfb><C:/Users/Marek Grudkow
+ski/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plti12.pfb><C:/Users/Ma
+rek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/pltt12.pfb>
+Output written on raport.pdf (7 pages, 195677 bytes).
 PDF statistics:
- 61 PDF objects out of 1000 (max. 8388607)
+ 76 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

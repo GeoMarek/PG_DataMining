@@ -6,6 +6,7 @@
 \usepackage{float}
 \usepackage{geometry}
 \usepackage{subcaption}
+\usepackage{indentfirst}
 \geometry{
 	left=25mm,
 	right=25mm,%
@@ -19,7 +20,7 @@
 \author{
 	Marek Grudkowski 156587
 	\\
-	Kamil Kaczmarkiewicz 171701
+	%Kamil Kaczmarkiewicz 171701
 }
 
 \begin{document}
@@ -32,73 +33,133 @@ Zbiór danych dotyczy aktualnego postępu poszczególnych państw w szczepieniac
 
 \section{Cel eksploracji i kryteria sukcesu}
 
+Celem eksploracji danych jest zgłębienie wszelkich tajemnic ukrytych w analizowanym zbiorze danych. Takie informacje można wykorzystać do wskazania zarówno państw, które najlepiej przeprowadzają program szczepień, jak i tych w których proces ten przebiega bardzo słabo. Dzięki temu niektóre państwa mogłyby się wzorować na tych państwach, które radzą sobie najlepiej oraz uniknąć błędów, jakie popełniły najgorsze w rankingu państwa.  Dodatkowym celem może być predykcja zapotrzebowania szczepionek w danych krajach na najbliższe miesiące, która mogłaby by zapobiec marnowaniu się dawek oraz pozwolić rządom na świecie lepiej zaplanować \textit{zakupy} oraz logistykę akcji na terenie swoich państw.  Jako ostatni cel można uznać wskazanie prawdopodobnej daty zakończenia światowego programu szczepień. 
+\par
+Jako kryteria sukcesu eksploracji danych można uznać odpowiednio wysoką (przykładowo $80$ \%) zgodność predykcji wykonywanych szczepień w danych państwach z rzeczywistymi danymi, które są aktualizowane na bieżąco. 
+
 \newpage
 
 \section{Charakterystyka zbioru danych}
-Zbiór danych na stan dnia pisania tego sprawozdania zawiera ponad 13300 przykładów. Dane aktualizowane są zazwyczaj każdego dnia i pochodzą z wielu różnych źródeł. Zazwyczaj są nimi organy krajowe lub lokalne, czy międzynarodowe organizacje. Dla każdego przykładu podane jest źródło i jego adres internetowy, co daje możliwość weryfikacji w przypadku jakichkolwiek wątpliwości co do poprawności danych. Dane zapisane są w jednym pliku w formacie csv i podzielone są na następujące kolumny:
-\begin{itemize}
-\item \textbf{country} - kraj, dla którego podawane są informacje o szczepieniu, atrybut nominalny w postaci ciągu znaków
-\item \textbf{iso\_code} - kod ISO dla danego kraju, atrybut nominalny w postaci ciągu znaków
-\item \textbf{date} - data wprowadzenia danych, atrybut nominalny opisujący datę
-\item \textbf{total\_vaccinations} - bezwzględna liczba wszystkich szczepień ochronnych w danym kraju, atrybut numeryczny (liczba naturalna)
-\item \textbf{people\_vaccinated} - liczba osób która otrzymała szczepionkę (przy dwóch dawkach liczona jest $\times2$), atrybut numeryczny (liczba naturalna)
-\item \textbf{people\_fully\_vaccinated} -  liczba osób, które otrzymały cały zestaw szczepień, atrybut numeryczny (liczba naturalna)
-\item \textbf{daily\_vaccinations\_raw} - dla danej pozycji liczba szczepień dla tej daty/kraju, atrybut numeryczny (liczba naturalna)
-\item \textbf{daily\_vaccinations} - dla danej pozycji liczba szczepień dla tej daty/kraju, atrybut numeryczny (liczba naturalna)
-\item \textbf{total\_vaccinations\_per\_hundred} - stosunek liczby szczepień do całkowitej liczby ludności danego dnia w kraju, atrybut numeryczny wyrażany w procentach
-\item \textbf{people\_vaccinated\_per\_hundred} - stosunek liczby osób zaszczepionych do całkowitej liczby ludności danego dnia w kraju, atrybut numeryczny wyrażany w procentach
-\item \textbf{people\_fully\_vaccinated\_per\_hundred} - stosunek liczby osób uodpornionych do całkowitej liczby ludności danego dnia w kraju, atrybut numeryczny wyrażany w procentach
-\item \textbf{daily\_vaccinations\_per\_million} - stosunek między liczbą szczepień a całkowitą liczbą ludności na bieżący dzień w kraju, dodania liczba rzeczywista
-\item \textbf{vaccines} - rodzaje szczepionek wykorzystanych w danym kraju, atrybut nominalny, ciągi znaków rozdzielone ukośnikiem
-\item \textbf{source\_name} - źródło informacji, atrybut nominalny, ciąg znaków
-\item \textbf{source\_website} - strona internetowa źródła informacji, atrybut nominalny, ciąg znaków
-\end{itemize}
+Zbiór danych na stan dnia pisania tego sprawozdania zawiera ponad 13300 przykładów. Dane aktualizowane są zazwyczaj co kilka dni i pochodzą z wielu różnych źródeł. Zazwyczaj są nimi organy krajowe lub lokalne, czy międzynarodowe organizacje. Dla każdego przykładu podane jest źródło i jego adres internetowy, co daje możliwość weryfikacji w przypadku jakichkolwiek wątpliwości co do poprawności danych. Dane zapisane są w jednym pliku w formacie csv i podzielone są na następujące kolumny:
+
+\paragraph{country}
+\mbox{}\\
+Nazwa państwa lub regionu, którego dotyczy dany przykład.
+
+\paragraph{ISO code}
+\mbox{}\\
+Trzyliterowy kod państwa zgodny z normą ISO $3166-1$
+
+\paragraph{date}
+\mbox{}\\
+Data pozyskania danych. 
+
+\paragraph{total vaccinations}
+\mbox{}\\
+Całkowita liczba podanych dawek. Zliczane są tutaj pojedyncze dawki i nie mogą być równe całkowitej liczbie zaszczepionych osób, w zależności od schematu dawkowania np. jedna osoba może przyjąć kilka dawek.
+
+\paragraph{total vaccinations per hundred}
+\mbox{}\\
+Całkowita liczba podanych dawek szczepionki w przeliczeniu na sto osób w liczbie ludności całego kraju.
+
+\paragraph{daily vaccinations raw}
+\mbox{}\\
+Dzienna zmiana w całkowitej liczbie podanych dawek. Oblicza się ją tylko dla kolejnych dni. Surowy środek w celu kontroli danych i jej przejrzystości. Autorzy zestawu nie zalecają korzystania z tego atrybutu. 
+
+\paragraph{daily vaccinations}
+\mbox{}\\
+Liczba dawek podawanych dziennie. Liczba ta jest wygładzana w ujęciu 7 dni. W przypadku krajów, które nie przekazują danych w ujęciu dziennym zakłada się, że dawki zmieniały się jednakowo we wszystkich okresach, w których nie przekazywano danych. Tak wypełnione dane uśrednia się dodatkowo w 7 dniowym oknie.
+
+\paragraph{daily vaccinations per million}
+\mbox{}\\
+Liczba dawek podawanych dziennie w przeliczeniu na milion osób w ludności całego kraju
+
+\paragraph{people vaccinated}
+\mbox{}\\
+Całkowita liczba osób, które otrzymały przynajmniej jedną dawkę szczepionki. Jeśli osoba otrzyma pierwszą dawkę liczba zwiększana jest jeden, jeśli otrzyma drugą, pozostaje taka sama. 
+
+\paragraph{people vaccinated per hundred}
+\mbox{}\\
+Całkowita liczba osób, które otrzymały przynajmniej jedną dawkę szczepionki w przeliczeniu na sto osób w liczbie ludności całego kraju.
+
+\paragraph{people fully vaccinated}
+\mbox{}\\
+Całkowita liczba osób, które otrzymały wszystkie dawki zgodnie ze schematem szczepienia. Jeśli bierzemy pod waugę schemat szczepień z dwoma dawkami - przy pierwszej dawce liczba nie zmienia się, po drugiej dawce zwiększana jest o 1. 
+
+\paragraph{people fully vaccinated per hundred}
+\mbox{}\\
+Całkowita liczba osób, które otrzymały wszystkie dawki zgodnie ze schematem szczepienia w przeliczeniu na sto osób w liczbie ludności całego kraju.
+
+\paragraph{source name}
+\mbox{}\\
+Nazwa źródła, z którego pochodzą dane.
+
+\paragraph{source website}
+\mbox{}\\
+Strona internetowa, źródła z którego pochodzą dane. 
 
 
-\section{Wyniki eksploracyjnej analizy danych}
+
+\section{Eksploracyjna analiza danych}
 
 
+\subsection{Atrybuty nominalne}
 
-Podczas analizowania danych pierwszym etapem, było sprawdzenie w jakiej ilości występują wartości puste. Ku naszemu zaskoczeniu przykładów z takimi wartościami było naprawdę dużo. Wyniki tej operacji zliczającej takie przykłady poniżej 
+Podczas \textit{stricte} pracy z danymi część atrybutów będzie nieprzydatna. Do takich atrybutów z pewnością należy źródło danych oraz jego adres w Internecie. Z tego powodu można pozbyć się tych kolumn i zmniejszyć rozmiar naszego zbioru.
 
-\begin{table}[h]
+Kolejny brany pod uwagę atrybut, który jest do odrzucenia to kod państwa. Przy wizualizacji wyników nie powie on dużo osobie, gdyż są to tylko 3 litery. Może jednak okazać się on przydatny w walidacji innego atrybutu jakim jest państwo. Zgodnie z opisem zbioru dostarczonym przez jego autorów część przykładów nie opisuje państw, lecz regiony wchodzące w skład innych państw np. Szkocja. Znając długość kodów ISO dla państw można wyodrębnić te przykłady, które dotyczą regionów:
+\begin{verbatim}
+England has code OWID_ENG
+Kosovo has code OWID_KOS
+Northern Cyprus has code OWID_CYN
+Northern Ireland has code OWID_NIR
+Scotland has code OWID_SCT
+Wales has code OWID_WLS
+\end{verbatim}
 
+Na początku został poprawiony kod przykładów, które dotyczą Kosowa. Kod wg normy ISO powinien mieć postać \textit{XKX} i na taki został zmieniony. Kolejnym krokiem było wcielenie przykładów dotyczących Północnego Cypru do Cypru. W tym przypadku zmiana dotyczyła zarówno kolumny \textit{country}, jak i \textit{iso\_code}. Anglia, Walia, Irlandia Północna oraz Walia są regionami, które wchodzą w skład Wielkiej Brytanii. Poprawnym rozwiązaniem w ich przypadku takich przykładów będzie dołączenie nich do Wielkiej Brytanii.
+
+\subsection{Atrybuty numeryczne}
+
+Pierwszym krokiem w analizie atrybutów numerycznych jest sprawdzenie, w jakiej liczbie występują braki w każdej kolumnie. Wyniki operacji sprawdzającej ten fakt, poniżej:
+
+\begin{verbatim}
+Size of data is: (13307, 13)
+Missing values in dataset: 
+country                                   0
+iso_code                                  0
+date                                      0
+total_vaccinations                     5255
+people_vaccinated                      5931
+people_fully_vaccinated                7926
+daily_vaccinations_raw                 6529
+daily_vaccinations                      220
+total_vaccinations_per_hundred         5255
+people_vaccinated_per_hundred          5931
+people_fully_vaccinated_per_hundred    7926
+daily_vaccinations_per_million          220
+vaccines                                  0
+\end{verbatim}
+
+Niestety jest są to bardzo duże braki, którymi należało się zająć. Na pierwszy rzut oka widać, że atrybuty łączą się w pary pod dwoma względami: nazwą oraz liczbą brakujących wartości. Zgodnie z opisem danych dostarczonym przez autorów w takiej jeden z atrybutów jest zależny od drugiego i pokazuje daną wartość w stosunku do populacji danego kraju. Aby upewnić się można sporządzić wykres prezentujący wartość korelacji pomiędzy poszczególnymi atrybutami (Rysunek \ref{Rys:cor})
+
+\begin{figure}[h]
 \centering
-\begin{tabular}{|l|c|}
-\hline
-\multicolumn{1}{|c|}{\textbf{Atrybut}} & \textbf{Brakujące wartości} \\ \hline
-country                                & 0                           \\ \hline
-iso\_code                              & 0                           \\ \hline
-date                                   & 0                           \\ \hline
-total vaccinations                     & 5390                        \\ \hline
-people vaccinated                      & 6069                        \\ \hline
-people fully vaccinated                & 8069                        \\ \hline
-daily vaccinations raw                 & 6685                        \\ \hline
-daily vaccinations                     & 226                         \\ \hline
-total vaccinations per hundred         & 5390                        \\ \hline
-people vaccinated per hundred          & 6069                        \\ \hline
-people fully vaccinated per hundred    & 8069                        \\ \hline
-daily vaccinations per million         & 226                         \\ \hline
-vaccines                               & 0                           \\ \hline
-source name                            & 0                           \\ \hline
-source website                         & 0                           \\ \hline
-\end{tabular}
-\caption{Puste wartości w zbiorze danych}
-\label{Tab:Tcr}
-\end{table}
+\includegraphics[width=0.8\textwidth]{../img/corelation.png} 
+\caption{Korelacja pomiędzy atrybutami całego zbioru danych\label{Rys:cor}}
 
+\end{figure}
 
-W tabeli można zauważyć, że liczba brakujących wartości dla atrybutów takich jak \textit{people\_fully\_vaccinated\_per\_hundred} są takie same jak dla \textit{people\_fully\_vaccinated}. Widać, że jest to para \textit{liczba bezwzględna - liczba względna}. Na 9 atrybutów, w których występują brakujące dane, 8 z nich tworzy właśnie takie pary. Bardzo możliwe, że te atrybuty mogą być od siebie liniowo zależne i są to po prostu przykłady opisujące momenty, kiedy program szczepień nie funkcjonował jeszcze w danym kraju. 
-\\
-\
-\\
-Cały zbiór przykładów jest podzielony na państwa, więc obliczenie korelacji między kolejnymi atrybutami dla wszystkich państw mogło by nie dać poprawnych wyników, gdyż dane z każdego kraju pochodzą z innego źródła. W celu uniknięcia tego błędu policzyliśmy współczynnik korelacji między poszczególnymi atrybutami dla każdego państwa osobno i z otrzymanych wartości sporządziliśmy histogram. Wyniki są zaprezentowane na wykresie poniżej. 
-\\
-\
-\\
-Widać więc, że wszystkie owe atrybuty są od siebie wręcz idealnie liniowo zależne, co potwierdza nasze przypuszczenia. Dzięki tej krótkiej analizie byliśmy w stanie podjąć decyzję o uzupełnieniu \textit{sparowanych} atrybutów zerami.
+Nie widać tutaj zależności o których wspomnieli autorzy. Powodem tego jest liczenie korelacji dla całego zbioru danych, a nie dla konkretnego państwa. Jeśli do funkcji rysującej wykres przekażemy tylko zakres danych obejmujący jedno państwo totalnie zmienia on swój wygląd. Przykładowy wykres dla Stanów Zjednoczonych można zobaczyć na rysunku nr \ref{Rys:usa}.
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{../img/usa_corr.png} 
+\caption{Korelacja pomiędzy atrybutami zbioru danych dla USA}
+\label{Rys:usa}
+\end{figure}
 
+Aby upewnić się, czy dla wszystkich państw występuje opisana zależność, można osobno dla każdego państwa obliczyć korelację pomiędzy atrybutami i sporządzić histogram, na którym role pojedynczych próbek będą pełnić państwa (Rysunek \ref{Rys:hist}). Zdecydowanie widać, że na każdym z owych wykresów niemal 100\% próbek wskazywało na korelację równą 1, co oznacza zgodność z tym, co napisali autorzy zestawu danych.
 
 \begin{figure}
   \begin{subfigure}[t]{.45\textwidth}
@@ -127,42 +188,30 @@ Widać więc, że wszystkie owe atrybuty są od siebie wręcz idealnie liniowo z
     \caption{Korelacja między liczbą wykonanych szczepień ogółem i na sto osób}
   \end{subfigure}
   \caption{Korelacje pomiędzy poszczególnym atrybutami zbioru}
-\label{Rys:kor}
+\label{Rys:hist}
 \end{figure}
 
+Przy uzupełnianiu luk w danych postępując wedle wskazówek twórcy zestawu danych atrybut \textit{daily\_vaccinations\_raw} nie powinien być uwzględniany podczas analizy, dlatego można z niego zrezygnować. 
 
-Po wykonaniu tej operacji jedynym \textit{samotnym} atrybutem w jakim pozostały wartości \textit{null} jest \textit{daily\_vaccinations\_raw}. Jego nazwa wskazuje, że mógłby mieć powiązanie z atrybutem \textit{daily\_vaccinations}, ale żeby to stwierdzić, trzeba tak jak w poprzedniej sytuacji obliczyć korelację między tymi atrybutami. Rozkład wyznaczonych korelacji wśród państw ostatecznie odrzucił tą propozycję. Wynikowy histogram można zobaczyć na wykresie poniżej:
 
-
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.5]{../img/raw_corr.png} 
-\label{Rys:kor}
-\caption{Korelacja pomiędzy \textit{daily\_vaccinations\_raw} oraz \textit{daily\_vaccinations}}
-\label{Rys:kor}
-\end{figure}
-\textbf{Co zostało do zrobienia:}
 \begin{itemize}
-\item opisać cele eksploracji i kryteria sukcesu
-\item dodać heat map korelacji dla wszystkich państw
-\item dodać heat map korelacji dla kilku przykładowych państw
-\item opisać pochodzenie kolumny raw
-\item dlaczego odrzucamy rozkład wartości bezwzględnych
-\item wykresy pudełkowe dla wartości względnych
-\item opisać wykresy pudełkowe (każdy osobno)
-\item zaprezentować zmianę w czasie dla jednej kolumny
-\item podsumowanie i wnioski
+\item opisanie luk w total vacc
+\item wypełnienie luk w total vacc
+\item mechanizm daily vacc
+\item wypełnienie luk w daily vacc
+\item wykresy pudełkowe
+\item podsumowanie
 \end{itemize}
 
 
 
 
-%Rozkłady wartości dla atrybutów 
-%rozkłady wartości atrybutów, korelacje pomiędzy wartościami atrybutów
-%wstępne ustalenia dotyczące zawartości zbioru 
-%\section{Uwagi dotyczące jakości danych}
-%dane brakujące, punkty oddalone, dane niespójne, dane niezrozumiałe,
-%\section{Opis wyników eksploracji}
-%w odniesieniu do celów eksploracji, czy dane są wystarczające, ewentualna rewizja celów
+
+
+
+
+
+
+
 
 \end{document}
