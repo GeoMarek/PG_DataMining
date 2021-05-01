@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.24)  1 MAY 2021 00:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.24)  1 MAY 2021 12:14
 entering extended mode
 **./raport.tex
 (raport.tex
@@ -184,12 +184,7 @@ backend-pdftex.def
 File: l3backend-pdftex.def 2021-02-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count195
 \l__pdf_internal_box=\box49
-)
-
-LaTeX Warning: Unused global option(s):
-    [openany].
-
-(raport.aux)
+) (raport.aux)
 \openout1 = `raport.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
@@ -347,14 +342,26 @@ File: ../img/null_column_diff4.png Graphic file (type png)
 <use ../img/null_column_diff4.png>
 Package pdftex.def Info: ../img/null_column_diff4.png  used on input line 187.
 (pdftex.def)             Requested size: 199.60896pt x 139.77637pt.
-[4] [5 <../img/corelation.png>] [6 <../img/usa_corr.png>] [7 <../img/null_colum
-n_diff1.png> <../img/null_column_diff2.png> <../img/null_column_diff3.png> <../
-img/null_column_diff4.png>] (raport.aux) ) 
+[4]
+Overfull \hbox (1.70673pt too wide) in paragraph at lines 196--197
+[]\OT4/cmr/m/n/12 Pierwszym atry-bu-tem, w któ-rym ªa-two mo»-na uzu-peª-ni¢ da
+-ne jest \OT4/cmr/m/it/12 to-tal[]vaccinations\OT4/cmr/m/n/12 .
+ []
+
+
+Overfull \hbox (13.37173pt too wide) in paragraph at lines 201--201
+[]\OT4/cmtt/m/n/12 liczbaPodanychDawekNaSto = totalnaLiczbaPodanychDawek / ludn
+oscKraju * 100[] 
+ []
+
+[5 <../img/corelation.png>] [6 <../img/usa_corr.png>] [7 <../img/null_column_di
+ff1.png> <../img/null_column_diff2.png> <../img/null_column_diff3.png> <../img/
+null_column_diff4.png>] [8] (raport.aux) ) 
 Here is how much of TeX's memory you used:
- 3418 strings out of 479334
- 58730 string characters out of 2851821
- 359207 words of memory out of 3000000
- 20839 multiletter control sequences out of 15000+200000
+ 3417 strings out of 479334
+ 58720 string characters out of 2851821
+ 359184 words of memory out of 3000000
+ 20838 multiletter control sequences out of 15000+200000
  415062 words of font info for 56 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,7n,77p,879b,460s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -372,9 +379,9 @@ grams/MiKTeX/fonts/type1/public/pl/plr17.pfb><C:/Users/Marek Grudkowski/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/pl/plsy10.pfb><C:/Users/Marek Grudkow
 ski/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plti12.pfb><C:/Users/Ma
 rek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/pltt12.pfb>
-Output written on raport.pdf (7 pages, 195677 bytes).
+Output written on raport.pdf (8 pages, 198563 bytes).
 PDF statistics:
- 76 PDF objects out of 1000 (max. 8388607)
+ 79 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

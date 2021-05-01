@@ -1,4 +1,4 @@
-\documentclass[12pt, oneside, openany]{article}
+\documentclass[12pt, oneside]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{polski}
 \renewcommand*{\figurename}{Rys.}
@@ -20,7 +20,7 @@
 \author{
 	Marek Grudkowski 156587
 	\\
-	%Kamil Kaczmarkiewicz 171701
+	Kamil Kaczmarkiewicz 171701
 }
 
 \begin{document}
@@ -191,12 +191,33 @@ Aby upewnić się, czy dla wszystkich państw występuje opisana zależność, m
 \label{Rys:hist}
 \end{figure}
 
-Przy uzupełnianiu luk w danych postępując wedle wskazówek twórcy zestawu danych atrybut \textit{daily\_vaccinations\_raw} nie powinien być uwzględniany podczas analizy, dlatego można z niego zrezygnować. 
+Jedynym atrybutem który pozostał bez pary jest \textit{daily\_vaccinations\_raw}. Jednakże wedle zaleczeń autorów zestawu nie powinien być uwzględniany podczas analizy, dlatego można z niego zrezygnować. 
+
+Pierwszym atrybutem, w którym łatwo można uzupełnić dane jest \textit{total\_vaccinations}. Dotyczy on łącznej sumy wykonanych szczepień w danym państwie. W przypadku brakujących wartości można je wypełnić zakładając idealną liniową progresję pomiędzy odległymi wartościami.
+
+Po wypełnieniu kolumny z totalną liczbą podanych dawek, można łatwo uzupełnić kolumnę opisującą średnią liczbę podanych dawek na sto osób. Wystarczy dla brakujących wartości wstawić liczbę opisaną zależnością:
+\begin{verbatim}
+liczbaPodanychDawekNaSto = totalnaLiczbaPodanychDawek / ludnoscKraju * 100 
+\end{verbatim}
+
+Aby to zrobić najpierw potrzebna jest liczba ludności w danym kraju. Aby wykorzystać w pełni nasz zbiór danych wielkość tą obliczyliśmy dla każdego państwa na podstawie średniego ilorazu liczby podanych dawek oraz liczby podanych dawek na sto osób, przy czym tutaj braliśmy pod uwagę tylko przykłady, w których nie brakowało żadnych wartości. Ostatecznie po wypełnieniu tych atrybutów liczba brakujących danych wygląda następująco:
+\begin{verbatim}
+country                                   0
+iso_code                                  0
+date                                      0
+total_vaccinations                        0
+people_vaccinated                      6069
+people_fully_vaccinated                8069
+daily_vaccinations                      226
+total_vaccinations_per_hundred            0
+people_vaccinated_per_hundred          6069
+people_fully_vaccinated_per_hundred    8069
+daily_vaccinations_per_million          226
+vaccines                                  0
+\end{verbatim}
 
 
 \begin{itemize}
-\item opisanie luk w total vacc
-\item wypełnienie luk w total vacc
 \item mechanizm daily vacc
 \item wypełnienie luk w daily vacc
 \item wykresy pudełkowe
