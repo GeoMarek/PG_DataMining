@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.24)  1 MAY 2021 21:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.24)  1 MAY 2021 23:43
 entering extended mode
 **./raport.tex
 (raport.tex
@@ -400,29 +400,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 282--283
 
  []
 
-[10] [11] (raport.aux) ) 
+[10] [11] (raport.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
  3829 strings out of 479334
- 65813 string characters out of 2851821
- 361354 words of memory out of 3000000
+ 65829 string characters out of 2851821
+ 361356 words of memory out of 3000000
  21242 multiletter control sequences out of 15000+200000
  414725 words of font info for 55 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,7n,77p,879b,460s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTe
-X/fonts/enc/dvips/pl/plrm.enc}{C:/Users/Marek Grudkowski/AppData/Local/Programs
-/MiKTeX/fonts/enc/dvips/pl/pltt.enc}{C:/Users/Marek Grudkowski/AppData/Local/Pr
-ograms/MiKTeX/fonts/enc/dvips/pl/plms.enc}{C:/Users/Marek Grudkowski/AppData/Lo
-cal/Programs/MiKTeX/fonts/enc/dvips/pl/plit.enc}<C:/Users/Marek Grudkowski/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/pl/plbx12.pfb><C:/Users/Marek Grud
-kowski/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plr10.pfb><C:/Users/
-Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plr12.pfb>
-<C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/
-plr17.pfb><C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/pl/plsy10.pfb><C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/pl/plti12.pfb><C:/Users/Marek Grudkowski/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/public/pl/pltt12.pfb>
-Output written on raport.pdf (11 pages, 234513 bytes).
+ 69i,7n,77p,873b,460s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/p
+lrm.enc}{C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/enc/dvip
+s/pl/pltt.enc}{C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/en
+c/dvips/pl/plms.enc}{C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fo
+nts/enc/dvips/pl/plit.enc}<C:/Users/Marek Grudkowski/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/pl/plbx12.pfb><C:/Users/Marek Grudkowski/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/pl/plr10.pfb><C:/Users/Marek Grudkowski/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/pl/plr12.pfb><C:/Users/Marek Grudko
+wski/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plr17.pfb><C:/Users/Ma
+rek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plsy10.pfb><
+C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/p
+lti12.pfb><C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/pl/pltt12.pfb>
+Output written on raport.pdf (11 pages, 234506 bytes).
 PDF statistics:
  93 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

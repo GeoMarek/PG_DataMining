@@ -36,7 +36,7 @@ Zbiór danych dotyczy aktualnego postępu poszczególnych państw w szczepieniac
 
 \section{Cel eksploracji i kryteria sukcesu}
 
-Celem eksploracji danych jest zgłębienie wszelkich tajemnic ukrytych w analizowanym zbiorze danych. Takie informacje można wykorzystać do wskazania zarówno państw, które najlepiej przeprowadzają program szczepień, jak i tych w których proces ten przebiega bardzo słabo. Dzięki temu niektóre państwa mogłyby się wzorować na tych państwach, które radzą sobie najlepiej oraz uniknąć błędów, jakie popełniły najgorsze w rankingu państwa.  Dodatkowym celem może być predykcja zapotrzebowania szczepionek w danych krajach na najbliższe miesiące, która mogłaby by zapobiec marnowaniu się dawek oraz pozwolić rządom na świecie lepiej zaplanować \textit{zakupy} oraz logistykę akcji na terenie swoich państw.  Jako ostatni cel można uznać wskazanie prawdopodobnej daty zakończenia światowego programu szczepień. 
+Celem eksploracji danych jest zgłębienie wszelkich tajemnic ukrytych w analizowanym zbiorze danych. Takie informacje można wykorzystać do wskazania zarówno państw, które najlepiej przeprowadzają program szczepień, jak i tych w których proces ten przebiega bardzo słabo. Dzięki temu niektóre państwa mogłyby się wzorować na tych , które radzą sobie najlepiej oraz uniknąć błędów, jakie popełniły te, które są najgorsze w rankingu. Dodatkowym celem może być predykcja zapotrzebowania szczepionek w danych krajach na najbliższe miesiące, która mogłaby by zapobiec marnowaniu się dawek oraz pozwolić rządom na świecie lepiej zaplanować \textit{zakupy} oraz logistykę akcji na terenie swojego kraju.  Jako ostatni cel można uznać wskazanie prawdopodobnej daty zakończenia światowego programu szczepień. 
 \par
 Jako kryteria sukcesu eksploracji danych można uznać odpowiednio wysoką (przykładowo $80$ \%) zgodność predykcji wykonywanych szczepień w danych państwach z rzeczywistymi danymi, które są aktualizowane na bieżąco. 
 
@@ -87,7 +87,7 @@ Całkowita liczba osób, które otrzymały przynajmniej jedną dawkę szczepionk
 
 \paragraph{people fully vaccinated}
 \mbox{}\\
-Całkowita liczba osób, które otrzymały wszystkie dawki zgodnie ze schematem szczepienia. Jeśli bierzemy pod waugę schemat szczepień z dwoma dawkami - przy pierwszej dawce liczba nie zmienia się, po drugiej dawce zwiększana jest o 1. 
+Całkowita liczba osób, które otrzymały wszystkie dawki zgodnie ze schematem szczepienia. Jeśli bierzemy pod uwagę schemat szczepień z dwoma dawkami - przy pierwszej dawce liczba nie zmienia się, po drugiej dawce zwiększana jest o 1. 
 
 \paragraph{people fully vaccinated per hundred}
 \mbox{}\\
@@ -119,7 +119,7 @@ Northern Ireland has code OWID_NIR
 Scotland has code OWID_SCT
 Wales has code OWID_WLS
 \end{verbatim}
-Zgodnie z opisem dostarczonym przez twórców zbioru nie jest to błąd, lecz skutek pozyskiwania danych z różnych źródeł. Dla każdego z niepoprawnego kodu można przydzielić poprawny kod.
+Zgodnie z opisem dostarczonym przez twórców zbioru nie jest to błąd, lecz skutek pozyskiwania danych z różnych źródeł. Dla każdego z niepoprawnych kodów można przydzielić jego poprawny odpowiednik.
 
 Wartość kodu dla Kosowa według danych na oficjalnych stronach organizacji ISO powinno mieć kod \textit{XKX}. Północny Cypr powinien zostać włączony do Cypru, a pozostałe regiony (Anglia, Walia, Irlandia Północna oraz Walia) powinny zostać wcielone do  Wielkiej Brytanii. Podczas przygotowywania tych atrybutów kluczowe jest połączenie przykładów z kilku regionów w jeden przykład, jeśli dotyczą one tej samej daty. 
 
@@ -167,9 +167,9 @@ daily_vaccinations_per_million          220
 vaccines                                  0
 \end{verbatim}
 
-Niestety jest są to bardzo duże braki, którymi należy się zająć w późniejszym etapie. Na pierwszy rzut oka widać, że atrybuty łączą się w pary pod dwoma względami: nazwą oraz liczbą brakujących wartości. Zgodnie z opisem danych dostarczonym przez autorów w takiej jeden z atrybutów jest zależny od drugiego i pokazuje daną wartość w stosunku do populacji danego kraju. Aby upewnić się można sporządzić wykres prezentujący wartość korelacji pomiędzy poszczególnymi atrybutami (Rysunek \ref{Rys:corrHeatMapWorld})
+Niestety jak widać są to bardzo duże braki, którymi należy się zająć w późniejszym etapie. Na pierwszy rzut oka widać, że atrybuty łączą się w pary pod dwoma względami: nazwą oraz liczbą brakujących wartości. Zgodnie z opisem danych dostarczonym przez autorów w takiej parze jeden z atrybutów jest zależny od drugiego i pokazuje daną wartość w stosunku do populacji danego kraju. Aby upewnić się można sporządzić wykres prezentujący wartość korelacji pomiędzy poszczególnymi atrybutami (Rysunek \ref{Rys:corrHeatMapWorld})
 
-Nie widać na nim zależności o których wspomnieli autorzy. Powodem tego jest liczenie korelacji dla całego zbioru danych, a nie dla konkretnego państwa. Jeśli do funkcji rysującej wykres przekażemy tylko zakres danych obejmujący jedno państwo totalnie zmienia on swój wygląd. Przykładowy wykres dla Stanów Zjednoczonych można zobaczyć na rysunku nr \ref{Rys:corrHeatMapUsa}.
+Nie widać na nim zależności o których wspomnieli autorzy. Przyczyną jest liczenie korelacji dla całego zbioru danych, a nie konkretnego państwa. Jeśli do funkcji rysującej wykres przekażemy tylko zakres  obejmujący jedno państwo totalnie zmienia on swój wygląd. Przykładowy wykres dla USA można zobaczyć na rysunku nr \ref{Rys:corrHeatMapUsa}.
 
 
 \begin{figure}[!ht]
