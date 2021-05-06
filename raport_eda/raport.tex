@@ -36,7 +36,7 @@ Zbiór danych dotyczy aktualnego postępu poszczególnych państw w szczepieniac
 
 \section{Cel eksploracji i kryteria sukcesu}
 
-Celem eksploracji danych jest zgłębienie wszelkich tajemnic ukrytych w analizowanym zbiorze danych. Takie informacje można wykorzystać do wskazania zarówno państw, które najlepiej przeprowadzają program szczepień, jak i tych w których proces ten przebiega bardzo słabo. Dzięki temu niektóre państwa mogłyby się wzorować na tych , które radzą sobie najlepiej oraz uniknąć błędów, jakie popełniły te, które są najgorsze w rankingu. Dodatkowym celem może być predykcja zapotrzebowania szczepionek w danych krajach na najbliższe miesiące, która mogłaby by zapobiec marnowaniu się dawek oraz pozwolić rządom na świecie lepiej zaplanować \textit{zakupy} oraz logistykę akcji na terenie swojego kraju.  Jako ostatni cel można uznać wskazanie prawdopodobnej daty zakończenia światowego programu szczepień. 
+Celem eksploracji danych jest zgłębienie wszelkich tajemnic ukrytych w analizowanym zbiorze danych. Takie informacje można wykorzystać do wskazania zarówno państw, które najlepiej przeprowadzają program szczepień, jak i tych w których proces ten przebiega bardzo słabo. Dzięki temu niektóre państwa mogłyby się wzorować na tych, które radzą sobie najlepiej oraz uniknąć błędów, jakie popełniły te, które są najgorsze w rankingu. Dodatkowym celem może być predykcja zapotrzebowania szczepionek w danych krajach na najbliższe miesiące, która mogłaby by zapobiec marnowaniu się dawek oraz pozwolić rządom na świecie lepiej zaplanować \textit{zakupy} oraz logistykę akcji na terenie swojego kraju.  Jako ostatni cel można uznać wskazanie prawdopodobnej daty zakończenia światowego programu szczepień. 
 \par
 Jako kryteria sukcesu eksploracji danych można uznać odpowiednio wysoką (przykładowo $80$ \%) zgodność predykcji wykonywanych szczepień w danych państwach z rzeczywistymi danymi, które są aktualizowane na bieżąco. 
 
@@ -234,7 +234,7 @@ DailyVaccinationsPerMillion =
 \end{figure}
 
 
-Jedynym atrybutem który pozostał bez pary jest \textit{daily\_vaccinations\_raw}. Jednakże wedle zaleczeń autorów zestawu nie powinien być uwzględniany podczas analizy, dlatego można z niego zrezygnować. 
+Jedynym atrybutem który pozostał bez pary jest \textit{daily\_vaccinations\_raw}. Jednakże wedle zaleceń autorów zestawu nie powinien być uwzględniany podczas analizy, dlatego można z niego zrezygnować. 
 
 Część z brakujących wpisów można łatwo uzupełnić, wykorzystując opisane wcześniej reguły. Łączną sumę podanych dawek szczepionki można wyznaczyć prostą metodą, jeśli założymy liniową progresją pomiędzy odległymi wartościami. Pozwoli to wypełnić nie tylko jedną kolumnę, ale aż dwie - przecież liczba podanych dawek na sto osób, to ta sama wartość, tylko zmieniona na podstawie populacji w danym kraju.  Podobne założenia można przyjąć w przypadku liczby osób, które przyjęły choć jedną dawkę, liczby osób w pełni uodpornionych oraz ich względnych odpowiednikach.
 
