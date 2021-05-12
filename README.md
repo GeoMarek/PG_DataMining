@@ -1,7 +1,7 @@
 ## Drugi etap - Przygotowanie danych i modelowanie
 
-- stworzyć szablony dokumentów
-- zaktualizować wersję plików
+- <strike>stworzyć szablony dokumentów</strike>
+- <strike>zaktualizować wersję plików</strike>
 - opisać zbiór danych wejściowych
 - odrzucenie zbędnych kolumn
 - uzupełnienie kolumny `iso_code`
