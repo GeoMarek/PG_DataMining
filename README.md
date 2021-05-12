@@ -1,0 +1,23 @@
+## Drugi etap - Przygotowanie danych i modelowanie
+
+- stworzyć szablony dokumentów
+- zaktualizować wersję plików
+- opisać zbiór danych wejściowych
+- odrzucenie zbędnych kolumn
+- uzupełnienie kolumny `iso_code`
+- uzupełnienie kolumny `total_vaccinations`
+- uzupełnienie kolumny `daily_vaccinations`
+- wyliczenie wartości względnych do populacji
+- uzupełnienie `people_vaccinated`
+- uzupełnienie `fully_vaccinated`
+- opisać cele eksploracji danych
+- wybrać metodykę eksploracji
+- dobranie algorytmu i jego parametrów
+- wykonanie algorytmu 
+- przeanalizowanie modelu
+- ocena wyników modelu
+- eksperymentowanie z modelem
+  - inny podzbiór atrybutów
+  - inne parametry algorytmu
+  - inne algorytmy
+- ocenić jak eksperymenty wpływają na model i ocenę
