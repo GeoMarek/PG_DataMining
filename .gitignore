@@ -1,4 +1,6 @@
 # jupyter directories
 /.ipynb_checkpoints
 /virtual_environment
+/__pycache__
+/.idea
 notes.txt
