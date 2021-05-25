@@ -9,20 +9,11 @@ class Country:
         self.df = data_frame.loc[data_frame['country'] == country]
         self.name = country
         self.population = 0
-
-        # prepare dataset
         self._setPrettyAccuratePopulation()
-        self._dropUnnecesaryColumns()
-
-        # fill total vaccinations
         self.fillTotalVaccinations()
         self.fillTotalVaccinationsPerHundred()
-
-        # fill daily vaccinations
         self.fillDailyVaccinations()
         self.fillDailyVaccinationsPerMillion()
-
-        # fill people vaccinated
         self.fillPeopleVaccinated()
         self.fillPeopleVaccinatedPerHundred()
         self.fillPeopleFullyVaccinatedPerHundred()
@@ -62,7 +53,7 @@ class Country:
         self._updateBeginningOf('people_vaccinated')
         self._fillRowsWithPeopleVaccinated()
         self.df['people_vaccinated'] = self.df['people_vaccinated'].astype(int)
-        self.df['people_vaccinated_per_hundred'] = self.df['people_vaccinated_per_hundred'].astype(int)
+        self.df['people_fully_vaccinated'] = self.df['people_fully_vaccinated'].astype(int)
 
     def fillPeopleVaccinatedPerHundred(self) -> None:
         self._fillPairedColumns('people_vaccinated', 'people_vaccinated_per_hundred')
@@ -138,15 +129,6 @@ class Country:
             if count == 7:
                 break
         return vacc_sum // count
-
-    def _dropUnnecesaryColumns(self) -> None:
-        """
-        Drop useless columns
-        """
-        del self.df['source_name']
-        del self.df['source_website']
-        del self.df['vaccines']
-        del self.df['daily_vaccinations_raw']
 
     def _getPopulationBasedOn(self, column: str) -> int:
         """
