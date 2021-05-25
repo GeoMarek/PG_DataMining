@@ -61,6 +61,8 @@ class Country:
         self._interpolateBy('people_vaccinated')
         self._updateBeginningOf('people_vaccinated')
         self._fillRowsWithPeopleVaccinated()
+        self.df['people_vaccinated'] = self.df['people_vaccinated'].astype(int)
+        self.df['people_vaccinated_per_hundred'] = self.df['people_vaccinated_per_hundred'].astype(int)
 
     def fillPeopleVaccinatedPerHundred(self) -> None:
         self._fillPairedColumns('people_vaccinated', 'people_vaccinated_per_hundred')
