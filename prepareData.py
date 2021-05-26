@@ -1,11 +1,5 @@
-from functions import fillDataFrame, readData
-
-
-def main() -> None:
-    df = readData()
-    fillDataFrame(df)
-    df.to_csv("clean_data.csv")
+from Datasets import Dataset
 
 
 if __name__ == "__main__":
-    main()
+    my_data = Dataset("data_12_05")
