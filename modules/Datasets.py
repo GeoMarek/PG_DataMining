@@ -2,12 +2,13 @@ from typing import Iterator
 import pandas as pd
 import os
 from pandas import DataFrame
-from Countries import Country
+from modules.Countries import Country
 
 
 class Dataset:
     def __init__(self, filename):
         self.dataset = self.readDataFrom(filename)
+        self._convertDate()
         unstandarized_countries = self.getDataWithWrongISO()
         for country in unstandarized_countries:
             self.dropDuplicatedRegion(country)
@@ -55,3 +56,9 @@ class Dataset:
         :return:
         """
         self.dataset = self.dataset.drop(self.dataset[self.dataset.iso_code == wrong_iso_code].index)
+
+    def _convertDate(self):
+        self.dataset['date'] = pd.to_datetime(self.dataset['date'], format='%Y-%m-%d')
+
+
+
