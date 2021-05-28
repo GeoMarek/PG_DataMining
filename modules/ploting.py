@@ -21,3 +21,9 @@ def correlation_map(_df, _cols):
     sns.set(style='whitegrid', context='notebook')
     sns.pairplot(_df[_cols], height=2.5)
     plt.show()
+
+
+def lin_regplot(_x, _y, model):
+    plt.scatter(_x, _y, c='blue')
+    plt.plot(_x, model.predict(_x), color='red')
+    return None
