@@ -102,16 +102,15 @@ def save_leaders(head: int) -> None:
         count += 1
 
 
-def poly_regression(x, y) -> Tuple[float, int]:
+def poly_regression(x, y, target) -> Tuple[float, int]:
     score = 0
     best_deegree = 1
     for num in range(1, 10):
         p = RegressionPrediction(x, y, degree=num)
         p_sc = p.root_score
-        if p_sc > score:
+        if p_sc > score and p.predict_for_value(target) is not None:
             score = p_sc
             best_deegree = num
-    print(f"Best prediction with {best_deegree} degree - r2 score is {round(score, 10)}")
     p = RegressionPrediction(x, y, degree=best_deegree)
     p.plot()
     return score, best_deegree
@@ -126,8 +125,8 @@ def random_tree_regression(x, y):
     plt.show()
 
 
-def regression_from(filename: str, column_name: str) -> Tuple[float, int]:
+def regression_from(filename: str, column_name: str, target: int) -> Tuple[float, int]:
     df = read_data(filename)
     y = df[column_name].to_numpy().reshape(-1, 1)
     x = np.array(range(y.size)).reshape(-1, 1)
-    return poly_regression(x, y)
+    return poly_regression(x, y, target)

@@ -10,8 +10,11 @@ POLAND = os.path.join(os.getcwd(), "data", "countries", "Poland.csv")
 def main():
     init_country_directory()
     save_leaders(25)
+    print("United Arab Emirates")
     regression_from(LEADER1, 'people_fully_vaccinated_per_hundred')
+    print("Israel")
     regression_from(LEADER2, 'people_fully_vaccinated_per_hundred')
+    print("Chile")
     regression_from(LEADER3, 'people_fully_vaccinated_per_hundred')
 
     # TODO: znaleźć sposób na wybranie stopnia, gdzie predykcja idzie w górę i nie ma overfitting

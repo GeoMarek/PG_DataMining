@@ -1,5 +1,8 @@
+from typing import Tuple, Optional
+
 import numpy as np
 from matplotlib import pyplot as plt
+from pandas._typing import ArrayLike
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.preprocessing import PolynomialFeatures
@@ -15,14 +18,6 @@ class RegressionPrediction:
         self.poly_regr = PolynomialFeatures(degree=self.degree)
         self.coef = self.poly_regr.fit_transform(self.x_src)
         self.line_regr.fit(self.coef, self.y_src)
-
-        x0 = np.arange(self.x_src.min(), self.x_src.max()+50, 1)[:, np.newaxis]
-        y0 = self.line_regr.predict(self.poly_regr.fit_transform(x0))
-        plt.scatter(self.x_src, self.y_src, label='Source points')
-        plt.plot(x0, y0, label='Predict function', linestyle='--', color='orange')
-        plt.legend(loc='upper left')
-        plt.show()
-
         self.y_polynomial = self.line_regr.predict(self.poly_regr.fit_transform(self.x_fit))
 
     def linear_regression(self):
@@ -43,3 +38,24 @@ class RegressionPrediction:
         plt.plot(self.x_fit, self.y_polynomial, label='Predict function', linestyle='--', color='orange')
         plt.legend(loc='upper left')
         plt.show()
+
+    def predict_for_value(self, value: float) -> Optional[Tuple[ArrayLike, ArrayLike]]:
+        count = 1
+        first_src = self.x_src.min()
+        last_src = self.x_src.max()
+        src_max_value = self.y_src.max()
+        while True:
+            all_x = np.arange(first_src, last_src + count, 1)[:, np.newaxis]
+            all_y = self.line_regr.predict(self.poly_regr.fit_transform(all_x))
+            new_y = all_y.copy()[last_src:]
+            if np.any(new_y < src_max_value):
+                print(f"Prediction with {self.degree} degree is bad (new values goes down)")
+                return
+            elif count > self.x_src.size:
+                print(f"Prediction with {self.degree} degree is bad (predicting date is to far)")
+                return
+            elif np.any(new_y >= value):
+                print(f"Prediction with {self.degree} degree is good. "
+                      f"It can be to achieve {value} value in {count} days for now")
+                return all_x, all_y
+            count += 1
