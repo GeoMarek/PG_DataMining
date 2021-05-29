@@ -39,7 +39,7 @@ class RegressionPrediction:
         plt.legend(loc='upper left')
         plt.show()
 
-    def predict_for_value(self, value: float) -> Optional[Tuple[ArrayLike, ArrayLike]]:
+    def predict_for_value(self, value: float) -> Optional[int]:
         count = 1
         first_src = self.x_src.min()
         last_src = self.x_src.max()
@@ -49,13 +49,13 @@ class RegressionPrediction:
             all_y = self.line_regr.predict(self.poly_regr.fit_transform(all_x))
             new_y = all_y.copy()[last_src:]
             if np.any(new_y < src_max_value):
-                print(f"Prediction with {self.degree} degree is bad (new values goes down)")
+                # print(f"Prediction with {self.degree} degree is bad (new values goes down)")
                 return
             elif count > self.x_src.size:
-                print(f"Prediction with {self.degree} degree is bad (predicting date is to far)")
+                # print(f"Prediction with {self.degree} degree is bad (predicting date is to far)")
                 return
             elif np.any(new_y >= value):
-                print(f"Prediction with {self.degree} degree is good. "
-                      f"It can be to achieve {value} value in {count} days for now")
-                return all_x, all_y
+                # print(f"Prediction with {self.degree} degree is good. "
+                #      f"It can be to achieve {value} value in {count} days for now")
+                return count
             count += 1

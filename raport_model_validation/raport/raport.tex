@@ -182,19 +182,24 @@ Tym sposobem wypełnionych została pewna część przykładów. Jedynymi brakam
 
 \section{Przygotowanie modelu} 
 
-Do zbudowania modelu wykorzystaliśmy regresję wielomianową zaimplementowaną w bibliotece \emph{Scikit-learn}. Każde państwo powinno posiadać własny model, który w pewnym sensie może reprezentować jego program szczepień. W ramach prac wybraliśmy 3 państwa, które posiadają aktualnie najwyższy współczynnik uodpornionych osób: \textbf{x1, x2, x3} oraz dodatkowo Polskę. 
+Do zbudowania modelu wykorzystaliśmy regresję wielomianową zaimplementowaną w bibliotece \emph{Scikit-learn}. Każde państwo powinno posiadać własny model, który w pewnym sensie może reprezentować jego program szczepień. W ramach prac wybraliśmy 3 państwa, które posiadają aktualnie najwyższy współczynnik uodpornionych osób: Zjednoczone Emiraty Arabskie, Izrael, Chile oraz dodatkowo Polskę. 
 
 \subsection{Algorytm budowy i sposób oceny modelu}
 
 Jako atrybuty modelu przyjmujemy tutaj zbiór wartości danej kolumny oraz stopień wielomianu. Podczas szukania najlepszego modelu dobieraliśmy tylko stopień wielomianu spośród wartości od 2 do 20. Wyższe stopnie mogą powodować zjawisko nazywane efektem Rungego, czyli dobre dopasowanie w środku zbioru i bardzo duże błędy na jego granicach. Jako ocenę danego wielomianu używaliśmy współczynnika $R^{2}$. Jest on miarą jakości dopasowania modelu i mówi o tym, jaki procent jednej zmiennej wyjaśnia zmienność drugiej zmiennej. Przyjmuje on wartości od 0 do 1, przy czym im bliżej jedynki, tym lepiej.
 
-W pierwszym kroku dla tych państw szukaliśmy funkcji, która najlepiej wpasowuje się w ich dotychczasowe przebiegi szczepień, by oszacować kiedy liczba uodpornionych osób osiągnie 70\%. Kolejną etapem pracy z modelem była próba predykcji ilości potrzebnych dawek szczepionki w Polsce w pierwsze dwa tygodnie maja. Najpierw wyznaczyliśmy najlepszy wielomian, który wpasowywał się w dane dotyczące okresu przed pierwszym maja. Następnie wyznaczyliśmy jakie wartości ten wielomian osiąga dla kolejnych 14 dni i porównaliśmy z wartościami rzeczywistymi. Można więc uznać że dane do kwietnia są zbiorem uczącym, a pierwsze dwa tygodnie maja zbiorem testującym.   
+W pierwszym kroku dla tych państw szukaliśmy funkcji, która najlepiej wpasowuje się w ich dotychczasowe przebiegi szczepień, by oszacować kiedy liczba uodpornionych osób osiągnie 80\%. Kolejną etapem pracy z modelem była próba predykcji ilości potrzebnych dawek szczepionki w Polsce w pierwsze dwa tygodnie maja. Najpierw wyznaczyliśmy najlepszy wielomian, który wpasowywał się w dane dotyczące okresu przed pierwszym maja. Następnie wyznaczyliśmy jakie wartości ten wielomian osiąga dla kolejnych 14 dni i porównaliśmy z wartościami rzeczywistymi. Można więc uznać że w tym przypadku dane do kwietnia są zbiorem uczącym, a pierwsze dwa tygodnie maja są zbiorem testującym.   
 
 \subsection{Wyniki zbudowanego modelu}
 
+Pierwsze modele dotyczyły miały na celu oszacowanie prawdopodobnego uzyskania przez dane państwo odporność populacyjnej (80\% ludności otrzymała dwie dawki). Sprawdziliśmy wszystkie wielomiany do 20 stopnia, które najlepiej opisują przebiegi szczepień w danych państwach. Algorytm odrzucał te stopnie, w których predykowane wartości były mniejsze niż największa dotychczasowa wartość i ostatecznie wybierał ten stopień wielomianu, który miał najwyższą wartość współczynnika $R^2$. 
 
-
-
+\begin{Verbatim}[tabsize=4]
+United Arab Emirates score: 0.994260 (6 degree) and resistant in 5 days
+Israel score: 0.997246 (7 degree) and resistant in 36 days
+Chile score: 0.995205 (6 degree) and resistant in 28 days
+Poland score: 0.997845 (5 degree) and resistant in 44 days
+\end{Verbatim}
 
 \section{Eksperymentowanie}
 

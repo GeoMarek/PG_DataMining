@@ -105,14 +105,18 @@ def save_leaders(head: int) -> None:
 def poly_regression(x, y, target) -> Tuple[float, int]:
     score = 0
     best_deegree = 1
-    for num in range(1, 10):
+    best_steps = None
+    for num in range(1, 20):
         p = RegressionPrediction(x, y, degree=num)
         p_sc = p.root_score
-        if p_sc > score and p.predict_for_value(target) is not None:
+        steps = p.predict_for_value(target)
+        if p_sc > score and steps is not None:
             score = p_sc
             best_deegree = num
+            best_steps = steps
     p = RegressionPrediction(x, y, degree=best_deegree)
     p.plot()
+    print(f"Final score: {score} ({best_deegree} degree) and achieve goal in {best_steps} days from now")
     return score, best_deegree
 
 
