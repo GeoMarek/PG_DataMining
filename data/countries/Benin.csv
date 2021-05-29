@@ -1,0 +1,11 @@
+,country,iso_code,date,total_vaccinations,people_vaccinated,people_fully_vaccinated,daily_vaccinations_raw,daily_vaccinations,total_vaccinations_per_hundred,people_vaccinated_per_hundred,people_fully_vaccinated_per_hundred,daily_vaccinations_per_million,vaccines,source_name,source_website
+2097,Benin,BEN,2021-05-12,10683,0,0,,0,0.09,0.09,0.0,0.0,"Oxford/AstraZeneca, Sinovac",Ministry of Health,https://covid19.who.int/
+2098,Benin,BEN,2021-05-13,10933,10886,46,,250,0.13662028433214138,0.1360329658135636,0.0005748223798846156,21.0,"Oxford/AstraZeneca, Sinovac",Ministry of Health,https://covid19.who.int/
+2099,Benin,BEN,2021-05-14,11183,11090,92,,250,0.13974431900542733,0.13858217810696494,0.0011496447597692313,21.0,"Oxford/AstraZeneca, Sinovac",Ministry of Health,https://covid19.who.int/
+2100,Benin,BEN,2021-05-15,11433,11294,139,,250,0.14286835367871328,0.1411313904003663,0.0017369632783469909,21.0,"Oxford/AstraZeneca, Sinovac",Ministry of Health,https://covid19.who.int/
+2101,Benin,BEN,2021-05-16,11683,11497,185,,250,0.14599238835199924,0.14366810655507448,0.002311785658231606,21.0,"Oxford/AstraZeneca, Sinovac",Ministry of Health,https://covid19.who.int/
+2102,Benin,BEN,2021-05-17,11933,11701,231,,250,0.1491164230252852,0.14621731884847583,0.002886608038116222,21.0,"Oxford/AstraZeneca, Sinovac",Ministry of Health,https://covid19.who.int/
+2103,Benin,BEN,2021-05-18,12183,11905,278,,250,0.15224045769857114,0.14876653114187716,0.0034739265566939817,21.0,"Oxford/AstraZeneca, Sinovac",Ministry of Health,https://covid19.who.int/
+2104,Benin,BEN,2021-05-19,12433,12108,324,,250,0.1553644923718571,0.15130324729658537,0.004048748936578597,21.0,"Oxford/AstraZeneca, Sinovac",Ministry of Health,https://covid19.who.int/
+2105,Benin,BEN,2021-05-20,12683,12312,370,,250,0.15848852704514305,0.1538524595899867,0.004623571316463212,21.0,"Oxford/AstraZeneca, Sinovac",Ministry of Health,https://covid19.who.int/
+2106,Benin,BEN,2021-05-21,12934,12516,418,,250,0.11,0.1,0.0,21.0,"Oxford/AstraZeneca, Sinovac",Ministry of Health,https://covid19.who.int/

@@ -1,0 +1,14 @@
+,country,iso_code,date,total_vaccinations,people_vaccinated,people_fully_vaccinated,daily_vaccinations_raw,daily_vaccinations,total_vaccinations_per_hundred,people_vaccinated_per_hundred,people_fully_vaccinated_per_hundred,daily_vaccinations_per_million,vaccines,source_name,source_website
+10516,Liberia,LBR,2021-05-12,36404,0,0,,0,0.72,0.72,0.0,0.0,Oxford/AstraZeneca,World Health Organization,https://covid19.who.int/
+10517,Liberia,LBR,2021-05-13,38186,38186,0,,1782,0.7557693068915015,0.7557693068915015,0.0,352.0,Oxford/AstraZeneca,World Health Organization,https://covid19.who.int/
+10518,Liberia,LBR,2021-05-14,39968,39968,0,,1782,0.7910382773225666,0.7910382773225666,0.0,352.0,Oxford/AstraZeneca,World Health Organization,https://covid19.who.int/
+10519,Liberia,LBR,2021-05-15,41751,41751,0,,1782,0.8263270395439972,0.8263270395439972,0.0,352.0,Oxford/AstraZeneca,World Health Organization,https://covid19.who.int/
+10520,Liberia,LBR,2021-05-16,43533,43533,0,,1782,0.8615960099750624,0.8615960099750624,0.0,352.0,Oxford/AstraZeneca,World Health Organization,https://covid19.who.int/
+10521,Liberia,LBR,2021-05-17,45316,45316,0,,1782,0.8968847721964929,0.8968847721964929,0.0,352.0,Oxford/AstraZeneca,World Health Organization,https://covid19.who.int/
+10522,Liberia,LBR,2021-05-18,47098,47098,0,,1782,0.932153742627558,0.932153742627558,0.0,352.0,Oxford/AstraZeneca,World Health Organization,https://covid19.who.int/
+10523,Liberia,LBR,2021-05-19,48881,48881,0,,1782,0.9674425048489886,0.9674425048489886,0.0,352.0,Oxford/AstraZeneca,World Health Organization,https://covid19.who.int/
+10524,Liberia,LBR,2021-05-20,50663,50663,0,,1782,1.0027114752800539,1.0027114752800539,0.0,352.0,Oxford/AstraZeneca,World Health Organization,https://covid19.who.int/
+10525,Liberia,LBR,2021-05-21,52446,52446,0,,1782,1.04,1.04,0.0,352.0,Oxford/AstraZeneca,World Health Organization,https://covid19.who.int/
+10526,Liberia,LBR,2021-05-22,52839,52839,0,,1584,1.0457784111150694,1.0457784111150694,0.0,313.0,Oxford/AstraZeneca,World Health Organization,https://covid19.who.int/
+10527,Liberia,LBR,2021-05-23,53232,53232,0,,1386,1.0535565847286545,1.0535565847286545,0.0,274.0,Oxford/AstraZeneca,World Health Organization,https://covid19.who.int/
+10528,Liberia,LBR,2021-05-24,53626,53626,0,,1187,1.06,1.06,0.0,235.0,Oxford/AstraZeneca,World Health Organization,https://covid19.who.int/

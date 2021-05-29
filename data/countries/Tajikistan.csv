@@ -1,0 +1,9 @@
+,country,iso_code,date,total_vaccinations,people_vaccinated,people_fully_vaccinated,daily_vaccinations_raw,daily_vaccinations,total_vaccinations_per_hundred,people_vaccinated_per_hundred,people_fully_vaccinated_per_hundred,daily_vaccinations_per_million,vaccines,source_name,source_website
+18454,Tajikistan,TJK,2021-05-09,70517,0,0,,0,0.74,0.74,0.0,0.0,Oxford/AstraZeneca,World Health Organization,https://covid19.who.int/
+18455,Tajikistan,TJK,2021-05-10,70778,70778,0,,261,0.7431307287674686,0.7431307287674686,0.0,27.0,Oxford/AstraZeneca,World Health Organization,https://covid19.who.int/
+18456,Tajikistan,TJK,2021-05-11,71039,71039,0,,261,0.7458710876389866,0.7458710876389866,0.0,27.0,Oxford/AstraZeneca,World Health Organization,https://covid19.who.int/
+18457,Tajikistan,TJK,2021-05-12,71301,71301,0,,261,0.7486219459697826,0.7486219459697826,0.0,27.0,Oxford/AstraZeneca,World Health Organization,https://covid19.who.int/
+18458,Tajikistan,TJK,2021-05-13,71562,71562,0,,261,0.7513623048413007,0.7513623048413007,0.0,27.0,Oxford/AstraZeneca,World Health Organization,https://covid19.who.int/
+18459,Tajikistan,TJK,2021-05-14,71824,71824,0,,261,0.7541131631720966,0.7541131631720966,0.0,27.0,Oxford/AstraZeneca,World Health Organization,https://covid19.who.int/
+18460,Tajikistan,TJK,2021-05-15,72085,72085,0,,261,0.7568535220436147,0.7568535220436147,0.0,27.0,Oxford/AstraZeneca,World Health Organization,https://covid19.who.int/
+18461,Tajikistan,TJK,2021-05-16,72347,72347,0,,261,0.76,0.76,0.0,27.0,Oxford/AstraZeneca,World Health Organization,https://covid19.who.int/
