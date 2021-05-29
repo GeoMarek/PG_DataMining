@@ -1,10 +1,15 @@
 import operator
 
+import numpy as np
+from matplotlib import pyplot as plt
 from pandas import DataFrame
 import pandas as pd
 import os
 from modules.Datasets import Dataset
-from typing import Dict
+from typing import Dict, Tuple
+
+from modules.Predicts import RegressionPrediction
+from modules.ploting import lin_regplot
 
 
 def read_data(path_name: str) -> DataFrame:
@@ -95,3 +100,34 @@ def save_leaders(head: int) -> None:
         df = read_from(leader)
         save_leader(count, leader, df)
         count += 1
+
+
+def poly_regression(x, y) -> Tuple[float, int]:
+    score = 0
+    best_deegree = 1
+    for num in range(1, 10):
+        p = RegressionPrediction(x, y, degree=num)
+        p_sc = p.root_score
+        if p_sc > score:
+            score = p_sc
+            best_deegree = num
+    print(f"Best prediction with {best_deegree} degree - r2 score is {round(score, 10)}")
+    p = RegressionPrediction(x, y, degree=best_deegree)
+    p.plot()
+    return score, best_deegree
+
+
+def random_tree_regression(x, y):
+    from sklearn.tree import DecisionTreeRegressor
+    tree = DecisionTreeRegressor(max_depth=5)
+    tree.fit(x, y)
+    sort_idx = x.flatten().argsort()
+    lin_regplot(x[sort_idx], y[sort_idx], tree)
+    plt.show()
+
+
+def regression_from(filename: str, column_name: str) -> Tuple[float, int]:
+    df = read_data(filename)
+    y = df[column_name].to_numpy().reshape(-1, 1)
+    x = np.array(range(y.size)).reshape(-1, 1)
+    return poly_regression(x, y)

@@ -1,55 +1,30 @@
-from modules.Predicts import RegressionPrediction
-from modules.common_functions import init_country_directory, vaccine_country_dict, get_vaccine_leaders, read_from, \
-    save_leader, save_leaders
-from modules.ploting import lin_regplot
-import matplotlib.pyplot as plt
-import numpy as np
+import os
+from modules.common_functions import regression_from, init_country_directory, save_leaders
 
-
-def poly_regression(x, y):
-    score = 0
-    best_deegree = 1
-    for num in range(1, 100):
-        p = RegressionPrediction(x, y, degree=num)
-        p_sc = p.root_score
-        if p_sc > score:
-            score = p_sc
-            best_deegree = num
-        print(f"Degree {num} was checked..")
-    print(f"Best prediction with {best_deegree} degree - r2 score is {round(score, 10)}")
-    p = RegressionPrediction(x, y, degree=best_deegree)
-    p.plot()
-
-
-def random_tree_regression(x, y):
-    from sklearn.tree import DecisionTreeRegressor
-    tree = DecisionTreeRegressor(max_depth=5)
-    tree.fit(x, y)
-    sort_idx = x.flatten().argsort()
-    lin_regplot(x[sort_idx], y[sort_idx], tree)
-    plt.show()
+LEADER1 = os.path.join(os.getcwd(), "data", "leaders", "pos002_United Arab Emirates.csv")
+LEADER2 = os.path.join(os.getcwd(), "data", "leaders", "pos005_Israel.csv")
+LEADER3 = os.path.join(os.getcwd(), "data", "leaders", "pos014_Chile.csv")
+POLAND = os.path.join(os.getcwd(), "data", "countries", "Poland.csv")
 
 
 def main():
     init_country_directory()
     save_leaders(25)
+    regression_from(LEADER1, 'people_fully_vaccinated_per_hundred')
+    regression_from(LEADER2, 'people_fully_vaccinated_per_hundred')
+    regression_from(LEADER3, 'people_fully_vaccinated_per_hundred')
 
+    # TODO: znaleźć sposób na wybranie stopnia, gdzie predykcja idzie w górę i nie ma overfitting
+    # TODO: jeśli jakiś predykowany y jest mniejszy niż maxY z y_src to odrzuć
+    # TODO: zmniejszyć stopnie
+    # TODO: metoda na stop kiedy procent odpornych wynosi 90
+    # TODO: ładny wykres dla krajów wiodących
+    # TODO: wycięcie z Polski okresu do 30 kwietnia (learn)
+    # TODO: wycięcie z Polski okresu do 15 maja (test)
+    # TODO: predykcja na learn ile będzie za 15 dni
+    # TODO: obliczenie roznicy learn - test
+    # TODO: ładny wykres dla Polski
 
-
-
-    # save_clean_country("data_26_04", "Israel")
-    # df = read_data("Israel_data_26_04.csv")
-    # y = df['total_vaccinations'].to_numpy().reshape(-1, 1)
-    # x = np.array(range(y.size)).reshape(-1, 1)
-    # TODO: dataset for 3 countries with biggest fully vaccinated + Poland
-    # TODO: models for each country
-    # TODO: predict for 70 percent
-    # models for each country + Poland
-    # TODO: Poland dataset to 31.04 (pl_learn)
-    # TODO: Poland dataset to 15.05 (pl_test)
-    # TODO: model from pl_learn
-    # TODO: diff model and pl_test
-    
 
 if __name__ == "__main__":
     main()

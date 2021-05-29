@@ -11,11 +11,19 @@ class RegressionPrediction:
         self.y_src = y_src
         self.degree = degree
         self.x_fit = np.arange(self.x_src.min(), self.x_src.max()+1, 1)[:, np.newaxis]
-        line_regr = LinearRegression()
-        poly_regr = PolynomialFeatures(degree=self.degree)
-        self.coef = poly_regr.fit_transform(self.x_src)
-        line_regr.fit(self.coef, self.y_src)
-        self.y_polynomial = line_regr.predict(poly_regr.fit_transform(self.x_fit))
+        self.line_regr = LinearRegression()
+        self.poly_regr = PolynomialFeatures(degree=self.degree)
+        self.coef = self.poly_regr.fit_transform(self.x_src)
+        self.line_regr.fit(self.coef, self.y_src)
+
+        x0 = np.arange(self.x_src.min(), self.x_src.max()+50, 1)[:, np.newaxis]
+        y0 = self.line_regr.predict(self.poly_regr.fit_transform(x0))
+        plt.scatter(self.x_src, self.y_src, label='Source points')
+        plt.plot(x0, y0, label='Predict function', linestyle='--', color='orange')
+        plt.legend(loc='upper left')
+        plt.show()
+
+        self.y_polynomial = self.line_regr.predict(self.poly_regr.fit_transform(self.x_fit))
 
     def linear_regression(self):
         lin_regr = LinearRegression()
