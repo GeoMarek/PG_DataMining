@@ -11,11 +11,11 @@ class RegressionPrediction:
         self.y_src = y_src
         self.degree = degree
         self.x_fit = np.arange(self.x_src.min(), self.x_src.max()+1, 1)[:, np.newaxis]
-        poly_regr = LinearRegression()
-        polynomial = PolynomialFeatures(degree=self.degree)
-        self.coef = polynomial.fit_transform(self.x_src)
-        poly_regr.fit(self.coef, self.y_src)
-        self.y_polynomial = poly_regr.predict(polynomial.fit_transform(self.x_fit))
+        line_regr = LinearRegression()
+        poly_regr = PolynomialFeatures(degree=self.degree)
+        self.coef = poly_regr.fit_transform(self.x_src)
+        line_regr.fit(self.coef, self.y_src)
+        self.y_polynomial = line_regr.predict(poly_regr.fit_transform(self.x_fit))
 
     def linear_regression(self):
         lin_regr = LinearRegression()
