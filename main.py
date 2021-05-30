@@ -1,5 +1,9 @@
 import os
-from modules.common_functions import regression_from, init_country_directory, save_leaders, pick_rows_to, pick_rows_from
+import numpy as np
+
+from modules.common_functions import regression_from, save_leaders, prepare_files_to_predict_demand, read_data, \
+    poly_regression, predict_vaccine_demand, calculate_diff
+from modules.ploting import diff_plot
 
 ARAB_EMIRATES = os.path.join(os.getcwd(), "data", "leaders", "pos002_United Arab Emirates.csv")
 ISRAEL = os.path.join(os.getcwd(), "data", "leaders", "pos005_Israel.csv")
@@ -36,12 +40,18 @@ def predict_population_resistance():
 
 
 def predict_vaccines_demand():
-    pick_rows_to("2021-04-30", POLAND, "learning_set")
-    pick_rows_to("2021-05-15", POLAND, "testing_set")
-    pick_rows_from("2021-05-01", os.path.join(os.getcwd(), "data", "testing_set.csv"))
+    test, learn = prepare_files_to_predict_demand(POLAND)
+    new_y = predict_vaccine_demand(learn, 'daily_vaccinations')
+    y = read_data(test)['daily_vaccinations'].to_numpy().reshape(-1, 1)
+    x = np.array(range(y.size)).reshape(-1, 1)
+    diff_plot(x, new_y, y)
+    print(calculate_diff(y, new_y))
+
+
+
 
 
 if __name__ == "__main__":
-    init_country_directory()
+    # init_country_directory()
     # predict_population_resistance()
     predict_vaccines_demand()

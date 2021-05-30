@@ -71,6 +71,13 @@ class RegressionPrediction:
                 return count
             count += 1
 
+    def predict_future_values_in(self, steps):
+        first_src = self.x_src.min()
+        last_src = self.x_src.max()
+        self.new_x = np.arange(first_src, last_src + steps, 1)[:, np.newaxis]
+        self.new_y = self.line_regr.predict(self.poly_regr.fit_transform(self.new_x))
+
+
     @staticmethod
     def convert_int_to_date(points, start_date):
         begin = datetime.strptime(start_date, '%Y-%m-%d')

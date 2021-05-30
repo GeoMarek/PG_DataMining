@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.24)  29 MAY 2021 18:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.24)  30 MAY 2021 19:18
 entering extended mode
 **./raport.tex
 (raport.tex
@@ -194,7 +194,11 @@ backend-pdftex.def
 File: l3backend-pdftex.def 2021-02-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count198
 \l__pdf_internal_box=\box50
-) (raport.aux)
+) (raport.aux
+
+LaTeX Warning: Label `Rys:boxplotSamples' multiply defined.
+
+)
 \openout1 = `raport.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
@@ -316,32 +320,92 @@ LaTeX Font Info:    External font `plex10' loaded for size
 (Font)              <8> on input line 189.
 LaTeX Font Info:    External font `plex10' loaded for size
 (Font)              <6> on input line 189.
- [6] [7] (raport.aux) ) 
+<../img/ZEA_predict.png, id=23, 867.24pt x 361.35pt>
+File: ../img/ZEA_predict.png Graphic file (type png)
+<use ../img/ZEA_predict.png>
+Package pdftex.def Info: ../img/ZEA_predict.png  used on input line 206.
+(pdftex.def)             Requested size: 422.96637pt x 176.23346pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<../img/IS_predict.png, id=25, 867.24pt x 361.35pt>
+File: ../img/IS_predict.png Graphic file (type png)
+<use ../img/IS_predict.png>
+Package pdftex.def Info: ../img/IS_predict.png  used on input line 212.
+(pdftex.def)             Requested size: 422.96637pt x 176.23346pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<../img/CHI_predict.png, id=26, 867.24pt x 361.35pt>
+File: ../img/CHI_predict.png Graphic file (type png)
+<use ../img/CHI_predict.png>
+Package pdftex.def Info: ../img/CHI_predict.png  used on input line 218.
+(pdftex.def)             Requested size: 422.96637pt x 176.23346pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<../img/PL_predict.png, id=27, 867.24pt x 361.35pt>
+File: ../img/PL_predict.png Graphic file (type png)
+<use ../img/PL_predict.png>
+Package pdftex.def Info: ../img/PL_predict.png  used on input line 224.
+(pdftex.def)             Requested size: 391.6174pt x 163.17654pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[6]
+
+LaTeX Warning: Text page 7 contains only floats.
+
+[7 <../img/ZEA_predict.png> <../img/IS_predict.png> <../img/CHI_predict.png>]
+<../img/demand1.png, id=40, 867.24pt x 361.35pt>
+File: ../img/demand1.png Graphic file (type png)
+<use ../img/demand1.png>
+Package pdftex.def Info: ../img/demand1.png  used on input line 252.
+(pdftex.def)             Requested size: 391.6174pt x 163.17654pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<../img/demand2.png, id=41, 867.24pt x 361.35pt>
+File: ../img/demand2.png Graphic file (type png)
+<use ../img/demand2.png>
+Package pdftex.def Info: ../img/demand2.png  used on input line 259.
+(pdftex.def)             Requested size: 391.6174pt x 163.17654pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[8 <../img/PL_predict.png>] [9 <../img/demand1.png> <../img/demand2.png>]
+(raport.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 3741 strings out of 479334
- 63525 string characters out of 2851821
- 362288 words of memory out of 3000000
- 21166 multiletter control sequences out of 15000+200000
+ 3786 strings out of 479334
+ 64470 string characters out of 2851821
+ 362335 words of memory out of 3000000
+ 21203 multiletter control sequences out of 15000+200000
  414566 words of font info for 55 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,6n,77p,729b,212s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX
-/fonts/enc/dvips/pl/plrm.enc}{C:/Users/Marek Grudkowski/AppData/Local/Programs/
-MiKTeX/fonts/enc/dvips/pl/plmi.enc}{C:/Users/Marek Grudkowski/AppData/Local/Pro
-grams/MiKTeX/fonts/enc/dvips/pl/plit.enc}{C:/Users/Marek Grudkowski/AppData/Loc
-al/Programs/MiKTeX/fonts/enc/dvips/pl/pltt.enc} <C:\Users\Marek Grudkowski\AppD
-ata\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Marek
- Grudkowski/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plbx12.pfb><C:/
-Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plmi
-12.pfb><C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/pl/plr12.pfb><C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/pl/plr17.pfb><C:/Users/Marek Grudkowski/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/pl/plr8.pfb><C:/Users/Marek Grudkowski/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/pl/plti12.pfb><C:/Users/Marek Grudkowski/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/pl/pltt12.pfb>
-Output written on raport.pdf (7 pages, 77493 bytes).
+ 69i,6n,77p,729b,281s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/p
+lrm.enc}{C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/enc/dvip
+s/pl/plmi.enc}{C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/en
+c/dvips/pl/plit.enc}{C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fo
+nts/enc/dvips/pl/pltt.enc} <C:\Users\Marek Grudkowski\AppData\Local\MiKTeX\font
+s/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Marek Grudkowski/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/pl/plbx12.pfb><C:/Users/Marek Grudkowsk
+i/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plmi12.pfb><C:/Users/Mare
+k Grudkowski/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plr12.pfb><C:/
+Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plr1
+7.pfb><C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/pl/plr8.pfb><C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/pl/plti12.pfb><C:/Users/Marek Grudkowski/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/pl/pltt12.pfb>
+Output written on raport.pdf (9 pages, 183134 bytes).
 PDF statistics:
- 63 PDF objects out of 1000 (max. 8388607)
+ 82 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

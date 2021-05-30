@@ -1,5 +1,5 @@
 import operator
-
+from math import sqrt
 
 import numpy as np
 from matplotlib import pyplot as plt
@@ -104,7 +104,7 @@ def save_leaders(head: int) -> None:
         count += 1
 
 
-def poly_regression(x, y, target, **kwargs) -> Tuple[float, int]:
+def poly_regression_target(x, y, target, **kwargs) -> Tuple[float, int]:
     score = 0
     best_deegree = 1
     best_steps = None
@@ -123,6 +123,31 @@ def poly_regression(x, y, target, **kwargs) -> Tuple[float, int]:
     return score, best_deegree
 
 
+def poly_regression(x, y, **kwargs):
+    score = 0
+    best_deegree = 1
+    for num in range(1, 5):
+        p = RegressionPrediction(x, y, degree=num)
+        p_sc = p.root_score
+        if p_sc > score:
+            score = p_sc
+            best_deegree = num
+    p = RegressionPrediction(x, y, degree=best_deegree)
+    p.predict_future_values_in(15)
+    p.plot(**kwargs)
+    print(f"Final score: {score} ({best_deegree} degree)")
+    return p.new_y[p.x_src.max():]
+
+
+def calculate_diff(real_list, pred_list):
+    diffs = []
+    for real, pred in zip(real_list, pred_list):
+        difference = pred-real
+        print(f"{real[0]} <-> {int(difference[0])} <-> {round(100*difference[0]/real[0],2)}")
+        diffs.append(abs(difference))
+    return sqrt(sum([i**2 for i in diffs])/(len(diffs)-2))
+
+
 def random_tree_regression(x, y):
     from sklearn.tree import DecisionTreeRegressor
     tree = DecisionTreeRegressor(max_depth=5)
@@ -136,7 +161,23 @@ def regression_from(filename: str, column_name: str, target: int, **kwargs) -> T
     df = read_data(filename)
     y = df[column_name].to_numpy().reshape(-1, 1)
     x = np.array(range(y.size)).reshape(-1, 1)
-    return poly_regression(x, y, target, **kwargs)
+    return poly_regression_target(x, y, target, **kwargs)
+
+
+def predict_vaccine_demand(dataset, column):
+    df = read_data(dataset)
+    y = df[column].to_numpy().reshape(-1, 1)
+    x = np.array(range(y.size)).reshape(-1, 1)
+    return poly_regression(x, y, begin="2020-12-28", title="Predykcja ilości podanych dawek do 15 maja")
+
+
+def prepare_files_to_predict_demand(base_file: str) -> Tuple[str, str]:
+    test_path = os.path.join(os.getcwd(), "data", "testing_set.csv")
+    learn_path = os.path.join(os.getcwd(), "data", "learning_set.csv")
+    pick_rows_to("2021-04-30", base_file, "learning_set")
+    pick_rows_to("2021-05-15", base_file, "testing_set")
+    pick_rows_from("2021-05-01", test_path)
+    return test_path, learn_path
 
 
 def pick_rows_to(end_date: str, filename: str, save_name: str) -> None:

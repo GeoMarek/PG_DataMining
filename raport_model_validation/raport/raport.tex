@@ -192,7 +192,7 @@ W pierwszym kroku dla tych państw szukaliśmy funkcji, która najlepiej wpasowu
 
 \subsection{Wyniki zbudowanego modelu}
 
-Pierwsze modele dotyczyły miały na celu oszacowanie prawdopodobnego uzyskania przez dane państwo odporność populacyjnej (80\% ludności otrzymała dwie dawki). Sprawdziliśmy wszystkie wielomiany do 20 stopnia, które najlepiej opisują przebiegi szczepień w danych państwach. Algorytm odrzucał te stopnie, w których predykowane wartości były mniejsze niż największa dotychczasowa wartość i ostatecznie wybierał ten stopień wielomianu, który miał najwyższą wartość współczynnika $R^2$. 
+Pierwsze modele dotyczyły miały na celu oszacowanie prawdopodobnego uzyskania przez dane państwo odporność populacyjnej (80\% ludności otrzymała dwie dawki). Sprawdziliśmy wszystkie wielomiany do 20 stopnia, które najlepiej opisują przebiegi szczepień w danych państwach. Algorytm odrzucał te stopnie, w których predykowane wartości były mniejsze niż największa dotychczasowa wartość i ostatecznie wybierał ten stopień wielomianu, który miał najwyższą wartość współczynnika $R^2$. Poniżej wyniki algorytmu dla wybranych krajów:
 
 \begin{Verbatim}[tabsize=4]
 United Arab Emirates score: 0.994260 (6 degree) and resistant in 5 days
@@ -201,9 +201,69 @@ Chile score: 0.995205 (6 degree) and resistant in 28 days
 Poland score: 0.997845 (5 degree) and resistant in 44 days
 \end{Verbatim}
 
+\begin{figure}[h!]
+\centering
+\includegraphics[height=0.27\textheight]{../img/ZEA_predict.png} 
+\caption{Predykcja programu szczepień w Zjednoczonych Emiratach Arabskich}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[height=0.27\textheight]{../img/IS_predict.png} 
+\caption{Predykcja programu szczepień w Izraelu}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[height=0.27\textheight]{../img/CHI_predict.png} 
+\caption{Predykcja programu szczepień w Chile}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[height=0.25\textheight]{../img/PL_predict.png} 
+\caption{Predykcja programu szczepień w Polsce}
+\end{figure}
+
+W przypadku szukania zapotrzebowaia na dawki szczepionki model był trenowany na zbiorze danych dla Polski obejmującego dni od końca grudnia do końca kwietnia (123 próbki). Zbiorem walidującym było 15 próbek z maja. Wyniki są jednak niezbyt zadowalające, ponieważ według obliczeń model stwierdzał średnio o ponad 20\% większe zapotrzebowanie na szczepionki, niż to które rzeczywiście wystąpiło. W listingu poniżej znajduje się porównanie dla każdego dnia testowanego w postaci:
+
+ \textit{liczba podanych dawek} - \textit{nadwyżka wg algorytmu} - \textit{nadwyżka w procentach}
+
+\begin{Verbatim}[tabsize=4]
+238603 <-> 9199 <-> 3.86
+227494 <-> 28815 <-> 12.67
+207674 <-> 57476 <-> 27.68
+223591 <-> 50745 <-> 22.7
+219065 <-> 64809 <-> 29.58
+223364 <-> 70410 <-> 31.52
+247933 <-> 56112 <-> 22.63
+256212 <-> 58483 <-> 22.83
+261116 <-> 64619 <-> 24.75
+280263 <-> 56910 <-> 20.31
+281284 <-> 67735 <-> 24.08
+299243 <-> 62039 <-> 20.73
+301489 <-> 72483 <-> 24.04
+299936 <-> 87163 <-> 29.06
+300784 <-> 99889 <-> 33.2
+\end{Verbatim}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[height=0.25\textheight]{../img/demand1.png} 
+\caption{Predykcja programu szczepień w Polsce}
+\label{Rys:boxplotSamples}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[height=0.25\textheight]{../img/demand2.png} 
+\caption{Predykcja programu szczepień w Polsce}
+\label{Rys:boxplotSamples}
+\end{figure}
+
 
 \section{Wnioski}
 
-
+Regresja wielomianowa nie jest zbyt dobrym narzędziem, to predykcji ilości szczepień. Jest bardzo wrażliwa pod względem dobranego stopnia wielomianu i mimo niskiego błędu wpasowania, predykowane wartości znacznie odbiegają od tych, które w rzeczywistości się pojawią. Z pewnością bardziej skomplikowane algorytmy np. sieci neuronowe wydobyłyby z tego zbioru lepsze informacje. 
 
 \end{document}
