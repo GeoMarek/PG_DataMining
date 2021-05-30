@@ -87,9 +87,8 @@ Liczba dawek podawanych dziennie. Liczba ta jest wygładzana w ujęciu 7 dni. W 
 zmieniały się jednakowo we wszystkich okresach, w których nie przekazywano danych.
 Tak wypełnione dane uśrednia się dodatkowo w 7 dniowym oknie.
 
-\paragraph{daily vaccinations}
+\paragraph{daily vaccinations per million}
 \mbox{}\\
-daily vaccinations per million
 Liczba dawek podawanych dziennie w przeliczeniu na milion osób w ludności całego
 kraju
 
@@ -182,7 +181,7 @@ Tym sposobem wypełnionych została pewna część przykładów. Jedynymi brakam
 
 \section{Przygotowanie modelu} 
 
-Do zbudowania modelu wykorzystaliśmy regresję wielomianową zaimplementowaną w bibliotece \emph{Scikit-learn}. Każde państwo powinno posiadać własny model, który w pewnym sensie może reprezentować jego program szczepień. W ramach prac wybraliśmy 3 państwa, które posiadają aktualnie najwyższy współczynnik uodpornionych osób: Zjednoczone Emiraty Arabskie, Izrael, Chile oraz dodatkowo Polskę. 
+Do zbudowania modelu wykorzystaliśmy regresję wielomianową zaimplementowaną w bibliotece \emph{Scikit-learn}. Każde państwo powinno posiadać własny model, który w pewnym sensie może reprezentować jego program szczepień. W ramach prac wybraliśmy 3 państwa, które posiadają aktualnie jeden z najwyższych współczynników ilości uodpornionych osób: Zjednoczone Emiraty Arabskie, Izrael, Chile oraz dodatkowo Polskę. 
 
 \subsection{Algorytm budowy i sposób oceny modelu}
 
@@ -192,7 +191,7 @@ W pierwszym kroku dla tych państw szukaliśmy funkcji, która najlepiej wpasowu
 
 \subsection{Wyniki zbudowanego modelu}
 
-Pierwsze modele dotyczyły miały na celu oszacowanie prawdopodobnego uzyskania przez dane państwo odporność populacyjnej (80\% ludności otrzymała dwie dawki). Sprawdziliśmy wszystkie wielomiany do 20 stopnia, które najlepiej opisują przebiegi szczepień w danych państwach. Algorytm odrzucał te stopnie, w których predykowane wartości były mniejsze niż największa dotychczasowa wartość i ostatecznie wybierał ten stopień wielomianu, który miał najwyższą wartość współczynnika $R^2$. Poniżej wyniki algorytmu dla wybranych krajów:
+Pierwsze modele miały na celu oszacowanie prawdopodobnego uzyskania przez dane państwo odporności populacyjnej (80\% ludności otrzymała dwie dawki). Sprawdziliśmy wszystkie wielomiany do 20 stopnia, które najlepiej opisują przebiegi szczepień w danych państwach. Algorytm odrzucał te stopnie, w których predykowane wartości były mniejsze niż największa dotychczasowa wartość i ostatecznie wybierał ten stopień wielomianu, który miał najwyższą wartość współczynnika $R^2$. Poniżej wyniki algorytmu dla wybranych krajów:
 
 \begin{Verbatim}[tabsize=4]
 United Arab Emirates score: 0.994260 (6 degree) and resistant in 5 days
@@ -225,7 +224,7 @@ Poland score: 0.997845 (5 degree) and resistant in 44 days
 \caption{Predykcja programu szczepień w Polsce}
 \end{figure}
 
-W przypadku szukania zapotrzebowaia na dawki szczepionki model był trenowany na zbiorze danych dla Polski obejmującego dni od końca grudnia do końca kwietnia (123 próbki). Zbiorem walidującym było 15 próbek z maja. Wyniki są jednak niezbyt zadowalające, ponieważ według obliczeń model stwierdzał średnio o ponad 20\% większe zapotrzebowanie na szczepionki, niż to które rzeczywiście wystąpiło. W listingu poniżej znajduje się porównanie dla każdego dnia testowanego w postaci:
+W przypadku szukania zapotrzebowania na dawki szczepionki model był trenowany na zbiorze danych dla Polski obejmującego dni od końca grudnia do końca kwietnia (123 próbki). Zbiorem walidującym było 15 próbek z maja. Wyniki są jednak niezbyt zadowalające, ponieważ według obliczeń model stwierdzał średnio o ponad 20\% większe zapotrzebowanie na szczepionki, niż to które rzeczywiście wystąpiło. W listingu poniżej znajduje się porównanie dla każdego dnia testowanego w postaci:
 
  \textit{liczba podanych dawek} - \textit{nadwyżka wg algorytmu} - \textit{nadwyżka w procentach}
 
@@ -264,6 +263,6 @@ W przypadku szukania zapotrzebowaia na dawki szczepionki model był trenowany na
 
 \section{Wnioski}
 
-Regresja wielomianowa nie jest zbyt dobrym narzędziem, to predykcji ilości szczepień. Jest bardzo wrażliwa pod względem dobranego stopnia wielomianu i mimo niskiego błędu wpasowania, predykowane wartości znacznie odbiegają od tych, które w rzeczywistości się pojawią. Z pewnością bardziej skomplikowane algorytmy np. sieci neuronowe wydobyłyby z tego zbioru lepsze informacje. 
+Regresja wielomianowa nie jest zbyt dobrym narzędziem do predykcji ilości szczepień. Jest bardzo wrażliwa pod względem dobranego stopnia wielomianu i mimo niskiego błędu wpasowania, predykowane wartości znacznie odbiegają od tych, które w rzeczywistości się pojawią. Z pewnością bardziej skomplikowane algorytmy np. sieci neuronowe wydobyłyby z tego zbioru lepsze informacje. 
 
 \end{document}

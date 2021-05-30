@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.24)  30 MAY 2021 19:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.24)  30 MAY 2021 20:02
 entering extended mode
 **./raport.tex
 (raport.tex
@@ -308,22 +308,22 @@ LaTeX Font Info:    External font `plex10' loaded for size
 {C:/Users/Marek Grudkowski/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2] 
 [3]
 LaTeX Font Info:    Trying to load font information for OT4+cmtt on input line 
-129.
+128.
 
 (C:\Users\Marek Grudkowski\AppData\Local\Programs\MiKTeX\tex/latex/polski\ot4cm
 tt.fd
 File: ot4cmtt.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 ) [4] [5]
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <12> on input line 189.
+(Font)              <12> on input line 188.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <8> on input line 189.
+(Font)              <8> on input line 188.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <6> on input line 189.
+(Font)              <6> on input line 188.
 <../img/ZEA_predict.png, id=23, 867.24pt x 361.35pt>
 File: ../img/ZEA_predict.png Graphic file (type png)
 <use ../img/ZEA_predict.png>
-Package pdftex.def Info: ../img/ZEA_predict.png  used on input line 206.
+Package pdftex.def Info: ../img/ZEA_predict.png  used on input line 205.
 (pdftex.def)             Requested size: 422.96637pt x 176.23346pt.
 
 
@@ -332,7 +332,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <../img/IS_predict.png, id=25, 867.24pt x 361.35pt>
 File: ../img/IS_predict.png Graphic file (type png)
 <use ../img/IS_predict.png>
-Package pdftex.def Info: ../img/IS_predict.png  used on input line 212.
+Package pdftex.def Info: ../img/IS_predict.png  used on input line 211.
 (pdftex.def)             Requested size: 422.96637pt x 176.23346pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -340,7 +340,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <../img/CHI_predict.png, id=26, 867.24pt x 361.35pt>
 File: ../img/CHI_predict.png Graphic file (type png)
 <use ../img/CHI_predict.png>
-Package pdftex.def Info: ../img/CHI_predict.png  used on input line 218.
+Package pdftex.def Info: ../img/CHI_predict.png  used on input line 217.
 (pdftex.def)             Requested size: 422.96637pt x 176.23346pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -348,7 +348,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <../img/PL_predict.png, id=27, 867.24pt x 361.35pt>
 File: ../img/PL_predict.png Graphic file (type png)
 <use ../img/PL_predict.png>
-Package pdftex.def Info: ../img/PL_predict.png  used on input line 224.
+Package pdftex.def Info: ../img/PL_predict.png  used on input line 223.
 (pdftex.def)             Requested size: 391.6174pt x 163.17654pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -361,7 +361,7 @@ LaTeX Warning: Text page 7 contains only floats.
 <../img/demand1.png, id=40, 867.24pt x 361.35pt>
 File: ../img/demand1.png Graphic file (type png)
 <use ../img/demand1.png>
-Package pdftex.def Info: ../img/demand1.png  used on input line 252.
+Package pdftex.def Info: ../img/demand1.png  used on input line 251.
 (pdftex.def)             Requested size: 391.6174pt x 163.17654pt.
 
 
@@ -370,7 +370,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <../img/demand2.png, id=41, 867.24pt x 361.35pt>
 File: ../img/demand2.png Graphic file (type png)
 <use ../img/demand2.png>
-Package pdftex.def Info: ../img/demand2.png  used on input line 259.
+Package pdftex.def Info: ../img/demand2.png  used on input line 258.
 (pdftex.def)             Requested size: 391.6174pt x 163.17654pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -384,7 +384,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  3786 strings out of 479334
  64470 string characters out of 2851821
- 362335 words of memory out of 3000000
+ 362338 words of memory out of 3000000
  21203 multiletter control sequences out of 15000+200000
  414566 words of font info for 55 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -403,7 +403,7 @@ Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plr1
 ic/pl/plr8.pfb><C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/public/pl/plti12.pfb><C:/Users/Marek Grudkowski/AppData/Local/Programs/MiK
 TeX/fonts/type1/public/pl/pltt12.pfb>
-Output written on raport.pdf (9 pages, 183134 bytes).
+Output written on raport.pdf (9 pages, 183140 bytes).
 PDF statistics:
  82 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
