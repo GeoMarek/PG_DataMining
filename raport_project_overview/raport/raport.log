@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.24)  30 MAY 2021 19:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.24)  31 MAY 2021 01:02
 entering extended mode
 **./raport.tex
 (raport.tex
@@ -194,11 +194,7 @@ backend-pdftex.def
 File: l3backend-pdftex.def 2021-02-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count198
 \l__pdf_internal_box=\box50
-) (raport.aux
-
-LaTeX Warning: Label `Rys:boxplotSamples' multiply defined.
-
-)
+) (raport.aux)
 \openout1 = `raport.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
@@ -303,30 +299,54 @@ LaTeX Font Info:    External font `plex10' loaded for size
 (Font)              <10> on input line 31.
 LaTeX Font Info:    External font `plex10' loaded for size
 (Font)              <7> on input line 31.
+<../img/boxplot_of_samples.png, id=1, 363.3575pt x 266.9975pt>
+File: ../img/boxplot_of_samples.png Graphic file (type png)
+<use ../img/boxplot_of_samples.png>
+Package pdftex.def Info: ../img/boxplot_of_samples.png  used on input line 39.
+(pdftex.def)             Requested size: 266.1498pt x 195.57468pt.
  [1
 
-{C:/Users/Marek Grudkowski/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] (rap
-ort.aux)
+{C:/Users/Marek Grudkowski/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <../i
+mg/boxplot_of_samples.png>] [2]
+LaTeX Font Info:    Trying to load font information for OT4+cmtt on input line 
+64.
 
-LaTeX Warning: There were multiply-defined labels.
+(C:\Users\Marek Grudkowski\AppData\Local\Programs\MiKTeX\tex/latex/polski\ot4cm
+tt.fd
+File: ot4cmtt.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
+) [3]
+<../img/demand1.png, id=20, 867.24pt x 361.35pt>
+File: ../img/demand1.png Graphic file (type png)
+<use ../img/demand1.png>
+Package pdftex.def Info: ../img/demand1.png  used on input line 124.
+(pdftex.def)             Requested size: 391.6174pt x 163.17654pt.
 
- ) 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[4] [5 <../img/demand1.png>] (raport.aux) ) 
 Here is how much of TeX's memory you used:
- 3697 strings out of 479334
- 62849 string characters out of 2851821
- 354338 words of memory out of 3000000
- 21134 multiletter control sequences out of 15000+200000
- 409920 words of font info for 43 fonts, out of 3000000 for 9000
+ 3745 strings out of 479334
+ 63779 string characters out of 2851821
+ 363304 words of memory out of 3000000
+ 21172 multiletter control sequences out of 15000+200000
+ 411092 words of font info for 46 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,6n,77p,306b,212s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/p
-lrm.enc}<C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/pl/plbx12.pfb><C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fon
-ts/type1/public/pl/plr12.pfb><C:/Users/Marek Grudkowski/AppData/Local/Programs/
-MiKTeX/fonts/type1/public/pl/plr17.pfb>
-Output written on raport.pdf (1 page, 30980 bytes).
+ 69i,6n,77p,765b,281s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/Marek Grudkowski/AppData/L
+ocal/Programs/MiKTeX/fonts/enc/dvips/pl/plit.enc}{C:/Users/Marek Grudkowski/App
+Data/Local/Programs/MiKTeX/fonts/enc/dvips/pl/pltt.enc} <C:\Users\Marek Grudkow
+ski\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk>{C:/Use
+rs/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/plrm.enc}<
+C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/p
+lbx12.pfb><C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/pl/plr12.pfb><C:/Users/Marek Grudkowski/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/pl/plr17.pfb><C:/Users/Marek Grudkowski/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/pl/plti12.pfb><C:/Users/Marek Grudkowski/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/pl/pltt12.pfb>
+Output written on raport.pdf (5 pages, 89490 bytes).
 PDF statistics:
- 19 PDF objects out of 1000 (max. 8388607)
+ 51 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
