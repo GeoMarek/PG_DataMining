@@ -1,5 +1,6 @@
 import operator
 
+
 import numpy as np
 from matplotlib import pyplot as plt
 from pandas import DataFrame
@@ -7,6 +8,7 @@ import pandas as pd
 import os
 from modules.Datasets import Dataset
 from typing import Dict, Tuple
+from datetime import datetime
 
 from modules.Predicts import RegressionPrediction
 from modules.ploting import lin_regplot
@@ -102,11 +104,11 @@ def save_leaders(head: int) -> None:
         count += 1
 
 
-def poly_regression(x, y, target) -> Tuple[float, int]:
+def poly_regression(x, y, target, **kwargs) -> Tuple[float, int]:
     score = 0
     best_deegree = 1
     best_steps = None
-    for num in range(1, 20):
+    for num in range(1, 10):
         p = RegressionPrediction(x, y, degree=num)
         p_sc = p.root_score
         steps = p.predict_for_value(target)
@@ -115,7 +117,8 @@ def poly_regression(x, y, target) -> Tuple[float, int]:
             best_deegree = num
             best_steps = steps
     p = RegressionPrediction(x, y, degree=best_deegree)
-    p.plot()
+    p.predict_for_value(target)
+    p.plot(**kwargs)
     print(f"Final score: {score} ({best_deegree} degree) and achieve goal in {best_steps} days from now")
     return score, best_deegree
 
@@ -129,8 +132,22 @@ def random_tree_regression(x, y):
     plt.show()
 
 
-def regression_from(filename: str, column_name: str, target: int) -> Tuple[float, int]:
+def regression_from(filename: str, column_name: str, target: int, **kwargs) -> Tuple[float, int]:
     df = read_data(filename)
     y = df[column_name].to_numpy().reshape(-1, 1)
     x = np.array(range(y.size)).reshape(-1, 1)
-    return poly_regression(x, y, target)
+    return poly_regression(x, y, target, **kwargs)
+
+
+def pick_rows_to(end_date: str, filename: str, save_name: str) -> None:
+    df = read_data(filename)
+    df['date'] = pd.to_datetime(df['date'])
+    df = df[df['date'] <= datetime.strptime(end_date, '%Y-%m-%d')]
+    df.to_csv(os.path.join(os.getcwd(), "data", f"{save_name}.csv"))
+
+
+def pick_rows_from(start_date: str, filename: str) -> None:
+    df = read_data(filename)
+    df['date'] = pd.to_datetime(df['date'])
+    df = df[df['date'] >= datetime.strptime(start_date, '%Y-%m-%d')]
+    df.to_csv(filename)
