@@ -1,0 +1,18 @@
+\frametitle{Przygotowanie danych}
+\begin{lstlisting}
+Size of data is: (13307, 13)
+Missing values in dataset:
+country                                   0
+iso_code                                  0
+date                                      0
+total_vaccinations                     5255
+people_vaccinated                      5931
+people_fully_vaccinated                7926
+daily_vaccinations_raw                 6529
+daily_vaccinations                      220
+total_vaccinations_per_hundred         5255
+people_vaccinated_per_hundred          5931
+people_fully_vaccinated_per_hundred    7926
+daily_vaccinations_per_million          220
+vaccines                                  0
+\end{lstlisting}
